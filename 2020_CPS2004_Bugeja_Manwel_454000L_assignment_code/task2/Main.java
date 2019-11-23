@@ -5,14 +5,6 @@ class Main{
         System.out.println("Hello, World!");
         System.out.println();
 
-    
-        User Manwel = new User("lister");
-        Manwel.listSecurity("Harruba", 250.0, 2);
-
-        User Christian = new User("trader");
-        Christian.bookOrder("buy", 2, 25);
-
-
         int input = 1;
         Scanner sc = new Scanner(System.in);
 
@@ -29,6 +21,8 @@ class Main{
 
 
             switch(input){
+                case 0:
+                    break;
                 case 1:
                     fnExchange();
                     break;
@@ -45,7 +39,7 @@ class Main{
                     fnCancel();
                     break;
                 default:
-                    System.out.println("Error: not an option");
+                    System.out.println("Error: invalid option");
                     break;
             }
         }
@@ -56,6 +50,29 @@ class Main{
     }
     public static void fnRegister(){
         System.out.println("registering");
+        System.out.println("Enter name");
+
+        Scanner sc = new Scanner(System.in);
+        String inputName = sc.nextLine();
+
+        System.out.println("Please select type:");
+        System.out.println("1. lister");
+        System.out.println("2. trader");
+
+        int input = sc.nextInt();
+
+        switch(input){
+            case 1:
+                System.out.println("Registering " + inputName + " as lister");
+                User.create(inputName, "lister");
+                break;
+            case 2:
+                System.out.println("Registering " + inputName + " as trader");
+                User.create(inputName, "trader");
+                break;
+            default:
+                System.out.println("Error: invalid option");
+        }
     }
     public static void fnList(){
         System.out.println("listing");

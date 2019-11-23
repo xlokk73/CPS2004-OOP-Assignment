@@ -1,12 +1,21 @@
+import java.util.ArrayList;
+
 class User{
+    private static ArrayList<User> instances = new ArrayList<User>();
+
+    private String userName;
     private String userType;
 
-    User(String type){
+    public static void create(String name, String type){
+        User instance = new User();
+
         if(type == "trader" || type == "lister"){
-            userType = type;
+            instance.userName = name;
+            instance.userType = type;
+
             System.out.println("Registered " + type);
         }
-        
+
         else{
             System.out.println("Error: type does not exist");
         }
