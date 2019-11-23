@@ -5,6 +5,10 @@ class Main{
         System.out.println("Hello, World!");
         System.out.println();
 
+        User.create("Christian", "trader");
+        Security.list("Balluta", 25.0, 2);
+        Order.book("test", 2, 2.5, 1);
+
         int input = 1;
         Scanner sc = new Scanner(System.in);
 
@@ -15,6 +19,7 @@ class Main{
             System.out.println("3. list");
             System.out.println("4. book");
             System.out.println("5. cancel order");
+            System.out.println("6. show all");
             System.out.println();
 
             input = sc.nextInt();
@@ -37,6 +42,9 @@ class Main{
                     break;
                 case 5:
                     fnCancel();
+                    break;
+                case 6:
+                    fnShowAll();
                     break;
                 default:
                     System.out.println("Error: invalid option");
@@ -83,5 +91,17 @@ class Main{
     public static void fnCancel(){
         System.out.println("canceling order");
     }
+    public static void fnShowAll(){
+        System.out.println("Users:");
+        User.showInstances();
+        System.out.println();
 
+        System.out.println("Securities:");
+        Security.showInstances();
+        System.out.println();
+
+        System.out.println("Orders:");
+        Order.showInstances();
+        System.out.println();
+    }
 }

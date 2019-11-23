@@ -9,9 +9,19 @@ class User{
     public static void create(String name, String type){
         User instance = new User();
 
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).userName == name){
+                System.out.println("Error: User already exists");
+                return;
+            }
+        }
+
+
         if(type == "trader" || type == "lister"){
             instance.userName = name;
             instance.userType = type;
+
+            instances.add(instance);
 
             System.out.println("Registered " + type);
         }
@@ -20,6 +30,16 @@ class User{
             System.out.println("Error: type does not exist");
         }
     }
+
+    public static void showInstances(){
+        for(int i = 0; i < instances.size(); ++i){
+            System.out.println("Name: " + instances.get(i).userName);
+            System.out.println("Type: " + instances.get(i).userType);
+            System.out.println();
+        }
+    }
+
+
 
     public void listSecurity(String description, double price, int supply){
         if(this.userType == "trader"){
