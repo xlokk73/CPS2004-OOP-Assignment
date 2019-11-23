@@ -1,1 +1,1 @@
-java ExchangePlatform
+java Main

@@ -7,7 +7,7 @@ class Security{
     private double price;
     private int supply;
 
-    public static void createSecurity(String description, double price, int supply){
+    public static void list(String description, double price, int supply){
         Security instance = new Security();
 
         instance.description = description;

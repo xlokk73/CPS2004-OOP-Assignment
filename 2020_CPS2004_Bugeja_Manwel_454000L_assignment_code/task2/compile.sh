@@ -1,1 +1,1 @@
-javac ExchangePlatform.java Security.java
+javac Main.java Security.java User.java
