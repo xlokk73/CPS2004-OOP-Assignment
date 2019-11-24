@@ -5,10 +5,6 @@ class Main{
         System.out.println("Hello, World!");
         System.out.println();
 
-        User.create("Christian", "trader");
-        Security.list("Balluta", 25.0, 2);
-        Order.book("test", 2, 2.5, 1);
-
         int input = 1;
         Scanner sc = new Scanner(System.in);
 
@@ -84,6 +80,23 @@ class Main{
     }
     public static void fnList(){
         System.out.println("listing");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter user: ");
+        String user = sc.nextLine();
+
+        System.out.print("Enter description: ");
+        String description = sc.nextLine();
+
+        System.out.print("Enter price: ");
+        double price = sc.nextDouble();
+
+        System.out.print("Enter supply: ");
+        int supply = sc.nextInt();
+
+        Security.list(user, description, price, supply);
+
     }
     public static void fnBook(){
         System.out.println("booking");

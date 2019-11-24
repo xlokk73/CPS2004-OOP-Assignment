@@ -3,14 +3,16 @@ import java.util.ArrayList;
 class Order{
     private static ArrayList<Order> instances = new ArrayList<Order>();
 
+    private String booker;
     private String type;
     private int quantity;
     private double price;
     private long timestamp;
 
-    public static void book(String type, int quantity, double price, long timestamp){
+    public static void book(String booker, String type, int quantity, double price, long timestamp){
         Order instance = new Order();
 
+        instance.booker = booker;
         instance.type = type;
         instance.quantity = quantity;
         instance.price = price;

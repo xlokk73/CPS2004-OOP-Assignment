@@ -39,7 +39,20 @@ class User{
         }
     }
 
+    public static ArrayList returnList(){
+        ArrayList<User> listCopy = new ArrayList<User>(instances);
+        return listCopy;
+    }
 
+    public String returnUserName(){
+        String nameCopy = new String(userName);
+        return nameCopy;
+    }
+    
+    public String returnUserType(){
+        String typeCopy = new String(userType);
+        return typeCopy;
+    }
 
     public void listSecurity(String description, double price, int supply){
         if(this.userType == "trader"){
@@ -47,7 +60,7 @@ class User{
             return;
         }
 
-        Security.list(description, price, supply);
+        Security.list(this.userName, description, price, supply);
     }
 
     public void bookOrder(String type, int quantity, double supply){
@@ -57,6 +70,6 @@ class User{
         }
 
         long timestamp = System.currentTimeMillis();
-        Order.book(type, quantity, supply, timestamp);
+        Order.book(this.userName, type, quantity, supply, timestamp);
     }
 }
