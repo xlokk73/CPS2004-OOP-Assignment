@@ -51,7 +51,15 @@ class Main{
 
     public static void fnExchange(){
         System.out.println("exchanging");
+        ArrayList<Security> securityList= new ArrayList<Security>(Security.returnList());
+        ArrayList<Order> orderList = new ArrayList<Order>(Order.returnList());
+        for(int i = 0; i < securityList.size(); ++i){
+            for(int j = 0; j < orderList.size(); ++j){
+                // exchange
+            }
+        }
     }
+
     public static void fnRegister(){
         System.out.println("registering");
         System.out.println("Enter name");

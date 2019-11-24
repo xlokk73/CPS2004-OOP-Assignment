@@ -58,4 +58,10 @@ class Security{
     public static ArrayList getInstances(){
         return instances;
     }
+
+    public static ArrayList returnList(){
+        ArrayList<Security> listCopy = new ArrayList<Security>(instances);
+        return listCopy;
+    }
+
 }

@@ -76,5 +76,8 @@ class Order{
         }
     }
 
-
+    public static ArrayList returnList(){
+        ArrayList<Order> listCopy = new ArrayList<Order>(instances);
+        return listCopy;
+    }
 }
