@@ -100,6 +100,33 @@ class Main{
     }
     public static void fnBook(){
         System.out.println("booking");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter user: ");
+        String user = sc.nextLine();
+
+        System.out.println("Select a type:");
+        System.out.println("1. Buy");
+        System.out.println("2. Sell");
+        int input = sc.nextInt(); 
+        String type = new String();
+
+        switch(input){
+            case 1:
+                type = "buy";
+            case 2:
+                type = "sell";
+        }
+
+        System.out.print("Enter quantity: ");
+        int quantity = sc.nextInt();
+
+        System.out.print("Enter price: ");
+        double price = sc.nextDouble();
+
+        long timestamp = System.currentTimeMillis();
+        Order.book(user, type, quantity, price, timestamp);
     }
     public static void fnCancel(){
         System.out.println("canceling order");
