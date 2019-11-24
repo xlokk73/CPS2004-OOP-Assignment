@@ -49,6 +49,22 @@ class Order{
         instances.add(instance);
     }
 
+    public static void delete(String booker, String type, int quantity, double price){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).booker.equals(booker)
+            && instances.get(i).type.equals(type)
+            && instances.get(i).quantity == quantity
+            && instances.get(i).price == price){
+                instances.remove(i);
+                System.out.println("Order removed");
+            }
+
+            else if(i == instances.size() - 1){
+                System.out.println("Error: order does not exist");
+            }
+        }
+    }
+
     public static void showInstances(){
         for(int i = 0; i < instances.size(); ++i){
             System.out.println("Booker: " + instances.get(i).booker);
