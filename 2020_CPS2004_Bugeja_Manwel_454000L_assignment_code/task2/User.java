@@ -10,7 +10,7 @@ class User{
         User instance = new User();
 
         for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName == name){
+            if(instances.get(i).userName.equals(name)){
                 System.out.println("Error: User already exists");
                 return;
             }
