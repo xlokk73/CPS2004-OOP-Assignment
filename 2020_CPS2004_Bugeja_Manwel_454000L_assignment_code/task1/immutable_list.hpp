@@ -1,5 +1,5 @@
 #include <list>
 
-template<class T>;
+template<class T>
 using immutable_list = const std::list<T>;
     
