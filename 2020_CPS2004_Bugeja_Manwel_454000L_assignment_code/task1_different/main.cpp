@@ -34,5 +34,8 @@ int main(void){
     std::cout << "PRINTING list6" << std::endl;
     list6->print();
     
+    std::cout << "PRINTING list7" << std::endl;
+    immutable_list<int> list7(2);
+    list7.print();
     return 0;
 };
