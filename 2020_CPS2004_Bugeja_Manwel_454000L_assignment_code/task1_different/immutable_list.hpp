@@ -76,6 +76,7 @@ immutable_list* immutable_list::push_back(int new_value){
 void immutable_list::clear_last_ptr(void){
     if(this->next_ptr == nullptr){
         std::cout << "error: cannot have an empty list" << std::endl;
+        return;
     }
 
     else if(this->next_ptr->next_ptr == NULL){
