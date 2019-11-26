@@ -18,11 +18,17 @@ int main(void){
     list3->print();
 
     immutable_list* list4 = new immutable_list(9);
-    immutable_list* list5 = list4->push_back(8)->push_back(7);
+    immutable_list* list5 = list4->push_back(8)->push_back(7)->push_back(6);
     std::cout << "PRINTING list4" << std::endl;
     list4->print();
     std::cout << "PRINTING list5" << std::endl;
     list5->print();
+
+    immutable_list* list6 = list5->remove();
+    std::cout << "PRINTING list5" << std::endl;
+    list5->print();
+    std::cout << "PRINTING list6" << std::endl;
+    list6->print();
 
     return 0;
 };

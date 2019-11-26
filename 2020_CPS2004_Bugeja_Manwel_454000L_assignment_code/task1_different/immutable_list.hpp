@@ -7,13 +7,17 @@ class immutable_list{
         immutable_list* next_ptr;
 
         void change_last_ptr(immutable_list*);
+        void clear_last_ptr(void);
 
     public:
-        int value(void);
         immutable_list(int);
-        immutable_list* push_back(int);
+
+        int value(void);
         void print(void);
+
         immutable_list* copy(void);
+        immutable_list* push_back(int);
+        immutable_list* remove(void);
  };
    
 immutable_list::immutable_list(int new_value){
@@ -66,5 +70,26 @@ immutable_list* immutable_list::push_back(int new_value){
     immutable_list* new_list = this->copy();
     immutable_list* last_node = new immutable_list(new_value);
     new_list->change_last_ptr(last_node);
+    return new_list;
+}
+
+void immutable_list::clear_last_ptr(void){
+    if(this->next_ptr == nullptr){
+        std::cout << "error: cannot have an empty list" << std::endl;
+    }
+
+    else if(this->next_ptr->next_ptr == NULL){
+        delete this->next_ptr;
+        this->next_ptr = nullptr;
+    }
+
+    else{
+        this->next_ptr->clear_last_ptr();
+    }
+}
+
+immutable_list* immutable_list::remove(void){
+    immutable_list* new_list = this->copy();
+    new_list->clear_last_ptr();
     return new_list;
 }
