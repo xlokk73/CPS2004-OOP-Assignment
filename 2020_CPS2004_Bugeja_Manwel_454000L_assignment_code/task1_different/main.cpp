@@ -9,16 +9,16 @@ int main(void){
     list1->print();
 
 
-    immutable_list<int>* list2 = list1->push_back(3);
+    immutable_list<int>* list2 = list1->add(3);
     std::cout << "PRINTING list2" << std::endl;
     list2->print();
 
-    immutable_list<int>* list3 = list2->push_back(4);
+    immutable_list<int>* list3 = list2->add(4);
     std::cout << "PRINTING list3" << std::endl;
     list3->print();
 
     immutable_list<int>* list4 = new immutable_list(9);
-    immutable_list<int>* list5 = list4->push_back(8)->push_back(7)->push_back(6);
+    immutable_list<int>* list5 = list4->add(8)->add(7)->add(6);
     std::cout << "PRINTING list4" << std::endl;
     list4->print();
     std::cout << "PRINTING list5" << std::endl;
@@ -30,5 +30,9 @@ int main(void){
     std::cout << "PRINTING list6" << std::endl;
     list6->print();
 
+    list6 = list6->clear();
+    std::cout << "PRINTING list6" << std::endl;
+    list6->print();
+    
     return 0;
 };

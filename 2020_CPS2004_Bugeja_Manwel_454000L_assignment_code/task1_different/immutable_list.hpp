@@ -15,8 +15,9 @@ class immutable_list{
         void print(void);
 
         immutable_list<T>* copy(void);
-        immutable_list<T>* push_back(T);
+        immutable_list<T>* add(T);
         immutable_list<T>* remove(void);
+        immutable_list<T>* clear(void);
  };
    
 template<class T>
@@ -71,7 +72,7 @@ void immutable_list<T>::change_last_ptr(immutable_list<T>* new_ptr){
 }
 
 template<class T>
-immutable_list<T>* immutable_list<T>::push_back(T new_value){
+immutable_list<T>* immutable_list<T>::add(T new_value){
     immutable_list<T>* new_list = this->copy();
     immutable_list<T>* last_node = new immutable_list<T>(new_value);
     new_list->change_last_ptr(last_node);
@@ -100,4 +101,17 @@ immutable_list<T>* immutable_list<T>::remove(void){
     immutable_list<T>* new_list = this->copy();
     new_list->clear_last_ptr();
     return new_list;
+}
+
+template<class T>
+immutable_list<T>* immutable_list<T>::clear(void){
+    immutable_list<T>* new_list = this->copy();
+
+    if(new_list->next_ptr == nullptr){
+        return new_list;
+    }
+
+    else{
+        return new_list->next_ptr->clear();
+    }
 }
