@@ -11,6 +11,13 @@ int main(void){
     list3->print();
     std::cout << "printing list2" << std::endl;
     list2->print();
+    immutable_list<int>* list4 = list3->push(4)->push(5)->push(6);
+    std::cout << "printing list4" << std::endl;
+    list4->print();
+
+    immutable_list<int>* list5 = list4->pop();
+    std::cout << "printing list5" << std::endl;
+    list5->print();
 
     return 0;
 }

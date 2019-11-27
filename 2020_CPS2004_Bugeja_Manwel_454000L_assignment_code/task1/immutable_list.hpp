@@ -60,3 +60,14 @@ immutable_list<T>* immutable_list<T>::push(T new_value) const{
     return new_node;
 }
 
+template<typename T>
+immutable_list<T>* immutable_list<T>::pop(void) const{
+    immutable_list<T>* new_list = this->next_ptr->copy();
+    return new_list;
+}
+    
+template<typename T>
+immutable_list<T>* immutable_list<T>::clear(void) const{
+    immutable_list<T>* new_list = new immutable_list();
+    return new_list;
+}
