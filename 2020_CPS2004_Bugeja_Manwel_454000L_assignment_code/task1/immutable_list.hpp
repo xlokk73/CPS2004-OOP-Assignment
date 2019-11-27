@@ -12,8 +12,8 @@ class immutable_list{
     public:
         immutable_list<T>(void);
         immutable_list<T>* copy(void) const;
-        immutable_list<T>* add(T) const;
-        immutable_list<T>* remove(void) const;
+        immutable_list<T>* push(T) const;
+        immutable_list<T>* pop(void) const;
         immutable_list<T>* clear(void) const;
 
         void print(void) const;
@@ -38,7 +38,7 @@ void immutable_list<T>::print(void) const{
     this->next_ptr->print();
 }
 
-template<class T>
+template<typename T>
 immutable_list<T>* immutable_list<T>::copy(void) const{
     immutable_list<T>* new_list = new immutable_list<T>();
     
@@ -54,8 +54,9 @@ immutable_list<T>* immutable_list<T>::copy(void) const{
 }
 
 template<typename T>
-immutable_list<T>* immutable_list<T>::add(T new_value) const{
+immutable_list<T>* immutable_list<T>::push(T new_value) const{
     immutable_list<T>* new_list = this->copy();
     immutable_list<T>* new_node = new immutable_list(new_value, false, new_list);
     return new_node;
 }
+
