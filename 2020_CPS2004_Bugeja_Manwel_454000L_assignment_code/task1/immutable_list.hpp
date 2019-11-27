@@ -3,8 +3,8 @@
 template<typename T>
 class immutable_list{
     private:
-        bool is_empty;
-        T value;
+        const bool is_empty;
+        const T value;
         immutable_list<T>* next_ptr;
 
         immutable_list<T>(T, bool);
@@ -20,16 +20,12 @@ class immutable_list{
 };
 
 template<typename T>
-immutable_list<T>::immutable_list(void){
-    this->is_empty = true;
-    this->value = 0;
+immutable_list<T>::immutable_list(void) : is_empty(true), value(0){
     this->next_ptr = nullptr;
 }
 
 template<typename T>
-immutable_list<T>::immutable_list(T new_value, bool is_empty){
-    this->is_empty = is_empty;
-    this->value = new_value;
+immutable_list<T>::immutable_list(T new_value, bool is_empty) : is_empty(is_empty), value(new_value){
     this->next_ptr = nullptr;
 }
 
