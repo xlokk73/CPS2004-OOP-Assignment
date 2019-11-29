@@ -17,6 +17,9 @@ class ExchangePlatform{
                 }
             }
         }
+
+        //complete order booking
+        
        
 
         // comparing buy orders with sell orders

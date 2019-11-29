@@ -9,6 +9,7 @@ class Order{
     private int quantity;
     private double price;
     private long timestamp;
+    private boolean booked;
 
     public static void book(String booker, String product, String type, int quantity, double price, long timestamp){
 
@@ -47,6 +48,7 @@ class Order{
         instance.quantity = quantity;
         instance.price = price;
         instance.timestamp = timestamp;
+        instance.booked = false;
 
         instances.add(instance);
     }
@@ -103,5 +105,17 @@ class Order{
 
     public String returnType(){
         return type;
+    }
+
+    public int returnQuantity(){
+        return quantity;
+    }
+
+    public boolean isBooked(){
+        return booked;
+    }
+
+    public void completeBooking(){
+        booked = true;
     }
 }

@@ -78,4 +78,17 @@ class Security{
     public String returnProduct(){
         return product;
     }
+
+    public void reduceSupply(Order order){
+        if(order.returnQuantity() > supply && !order.isBooked()){
+            System.out.println("Warning: not enouch supply");
+            supply = 0;
+            order.completeBooking();
+        }
+
+        else if(!order.isBooked()){
+            supply = supply - order.returnQuantity();
+            order.completeBooking();
+        }
+    }
 }
