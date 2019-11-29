@@ -4,11 +4,12 @@ class Security{
     private static ArrayList<Security> instances = new ArrayList<Security>();
 
     private String lister;
+    private String product;
     private String description;
     private double price;
     private int supply;
 
-    public static void list(String lister, String description, double price, int supply){
+    public static void list(String lister, String product, String description, double price, int supply){
 
         ArrayList<User> shallowCopy = new ArrayList<User>(User.returnList());
         
@@ -34,10 +35,19 @@ class Security{
             }
         }
 
+        ArrayList<Security> securitiesCopy = new ArrayList<Security>(Security.returnList());
+
+        for(int i = 0; i < securitiesCopy.size(); ++i){
+            if(securitiesCopy.get(i).product.equals(product)){
+                System.out.println("Error: security already exists");
+                return;
+            }
+        }
 
         Security instance = new Security();
 
         instance.lister = lister;
+        instance.product = product;
         instance.description = description;
         instance.price = price;
         instance.supply = supply;
@@ -48,6 +58,7 @@ class Security{
     public static void showInstances(){
         for(int i = 0; i < instances.size(); ++i){
             System.out.println("Lister: " + instances.get(i).lister);
+            System.out.println("Product: " + instances.get(i).product);
             System.out.println("Description: " + instances.get(i).description);
             System.out.println("Price: " + instances.get(i).price);
             System.out.println("Supply: " + instances.get(i).supply);

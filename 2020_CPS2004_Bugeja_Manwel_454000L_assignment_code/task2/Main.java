@@ -51,13 +51,6 @@ class Main{
 
     public static void fnExchange(){
         System.out.println("exchanging");
-        ArrayList<Security> securityList= new ArrayList<Security>(Security.returnList());
-        ArrayList<Order> orderList = new ArrayList<Order>(Order.returnList());
-        for(int i = 0; i < securityList.size(); ++i){
-            for(int j = 0; j < orderList.size(); ++j){
-                // exchange
-            }
-        }
     }
 
     public static void fnRegister(){
@@ -94,6 +87,9 @@ class Main{
         System.out.print("Enter user: ");
         String user = sc.nextLine();
 
+        System.out.print("Enter product: ");
+        String product = sc.nextLine();
+
         System.out.print("Enter description: ");
         String description = sc.nextLine();
 
@@ -103,7 +99,7 @@ class Main{
         System.out.print("Enter supply: ");
         int supply = sc.nextInt();
 
-        Security.list(user, description, price, supply);
+        Security.list(user, product, description, price, supply);
 
     }
     public static void fnBook(){

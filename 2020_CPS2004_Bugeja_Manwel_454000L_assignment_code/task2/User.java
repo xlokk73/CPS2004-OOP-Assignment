@@ -54,13 +54,13 @@ class User{
         return typeCopy;
     }
 
-    public void listSecurity(String description, double price, int supply){
+    public void listSecurity(String description, String product, double price, int supply){
         if(this.userType == "trader"){
             System.out.println("Error: trader can not list securities");
             return;
         }
 
-        Security.list(this.userName, description, price, supply);
+        Security.list(this.userName, product, description, price, supply);
     }
 
     public void bookOrder(String type, int quantity, double price){
