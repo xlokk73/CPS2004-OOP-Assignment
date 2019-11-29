@@ -51,6 +51,18 @@ class Order{
         instances.add(instance);
     }
 
+    public static void delete(Order o){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).product.equals(o.product)){
+                instances.remove(i);
+                return;
+            }
+        }
+
+        System.out.println("Error: order does not exist");
+    }
+        
+
     public static void delete(String booker, String product, String type, int quantity, double price){
         for(int i = 0; i < instances.size(); ++i){
             if(instances.get(i).booker.equals(booker)
@@ -83,5 +95,13 @@ class Order{
     public static ArrayList returnList(){
         ArrayList<Order> listCopy = new ArrayList<Order>(instances);
         return listCopy;
+    }
+
+    public String returnProduct(){
+        return product;
+    }
+
+    public String returnType(){
+        return type;
     }
 }

@@ -75,4 +75,7 @@ class Security{
         return listCopy;
     }
 
+    public String returnProduct(){
+        return product;
+    }
 }
