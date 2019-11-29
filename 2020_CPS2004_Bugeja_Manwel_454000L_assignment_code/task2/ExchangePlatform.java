@@ -19,6 +19,11 @@ class ExchangePlatform{
         }
 
         //complete order booking
+        for(int i = 0; i < securityInstances.size(); ++i){
+            for(int j = 0; j < orderInstances.size(); ++j){
+                securityInstances.get(i).reduceSupply(orderInstances.get(j));
+            }
+        }
         
        
 
