@@ -110,6 +110,9 @@ class Main{
         System.out.print("Enter user: ");
         String user = sc.nextLine();
 
+        System.out.print("Enter product: ");
+        String product = sc.nextLine();
+
         System.out.println("Select a type:");
         System.out.println("1. Buy");
         System.out.println("2. Sell");
@@ -130,7 +133,7 @@ class Main{
         double price = sc.nextDouble();
 
         long timestamp = System.currentTimeMillis();
-        Order.book(user, type, quantity, price, timestamp);
+        Order.book(user, product, type, quantity, price, timestamp);
     }
     public static void fnCancel(){
         System.out.println("canceling order");
@@ -139,6 +142,9 @@ class Main{
         Scanner sc = new Scanner(System.in);
         System.out.print("Booker: ");
         String booker = sc.nextLine();
+
+        System.out.print("Product: ");
+        String product = sc.nextLine();
 
         System.out.println("Select type:");
         System.out.println("1. Buy");
@@ -159,7 +165,7 @@ class Main{
         System.out.print("Enter price: ");
         double price = sc.nextDouble();
 
-        Order.delete(booker, type, quantity, price);
+        Order.delete(booker, product, type, quantity, price);
 
     }
     public static void fnShowAll(){

@@ -63,13 +63,13 @@ class User{
         Security.list(this.userName, product, description, price, supply);
     }
 
-    public void bookOrder(String type, int quantity, double price){
+    public void bookOrder(String product, String type, int quantity, double price){
         if(this.userType == "lister"){
             System.out.println("Error: lister can not book orders");
             return;
         }
 
         long timestamp = System.currentTimeMillis();
-        Order.book(this.userName, type, quantity, price, timestamp);
+        Order.book(this.userName, product, type, quantity, price, timestamp);
     }
 }

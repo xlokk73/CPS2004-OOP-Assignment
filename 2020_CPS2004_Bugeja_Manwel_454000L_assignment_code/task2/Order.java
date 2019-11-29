@@ -4,12 +4,13 @@ class Order{
     private static ArrayList<Order> instances = new ArrayList<Order>();
 
     private String booker;
+    private String product;
     private String type;
     private int quantity;
     private double price;
     private long timestamp;
 
-    public static void book(String booker, String type, int quantity, double price, long timestamp){
+    public static void book(String booker, String product, String type, int quantity, double price, long timestamp){
 
 
         ArrayList<User> shallowCopy = new ArrayList<User>(User.returnList());
@@ -41,6 +42,7 @@ class Order{
         Order instance = new Order();
 
         instance.booker = booker;
+        instance.product = product;
         instance.type = type;
         instance.quantity = quantity;
         instance.price = price;
@@ -49,9 +51,10 @@ class Order{
         instances.add(instance);
     }
 
-    public static void delete(String booker, String type, int quantity, double price){
+    public static void delete(String booker, String product, String type, int quantity, double price){
         for(int i = 0; i < instances.size(); ++i){
             if(instances.get(i).booker.equals(booker)
+            && instances.get(i).product.equals(product)
             && instances.get(i).type.equals(type)
             && instances.get(i).quantity == quantity
             && instances.get(i).price == price){
@@ -68,6 +71,7 @@ class Order{
     public static void showInstances(){
         for(int i = 0; i < instances.size(); ++i){
             System.out.println("Booker: " + instances.get(i).booker);
+            System.out.println("Product: " + instances.get(i).product);
             System.out.println("Type: " + instances.get(i).type);
             System.out.println("Quantity: " + instances.get(i).quantity);
             System.out.println("Price: " + instances.get(i).price);
