@@ -69,7 +69,6 @@ class User{
             return;
         }
 
-        long timestamp = System.currentTimeMillis();
-        Order.book(this.userName, product, type, quantity, price, timestamp);
+        Order.book(this.userName, product, type, quantity, price);
     }
 }

@@ -51,7 +51,7 @@ class Main{
 
     public static void fnExchange(){
         System.out.println("exchanging");
-        ExchangePlatform.exchange();
+        // ExchangePlatform.exchange();
     }
 
     public static void fnRegister(){
@@ -133,8 +133,7 @@ class Main{
         System.out.print("Enter price: ");
         double price = sc.nextDouble();
 
-        long timestamp = System.currentTimeMillis();
-        Order.book(user, product, type, quantity, price, timestamp);
+        Order.book(user, product, type, quantity, price);
     }
     public static void fnCancel(){
         System.out.println("canceling order");

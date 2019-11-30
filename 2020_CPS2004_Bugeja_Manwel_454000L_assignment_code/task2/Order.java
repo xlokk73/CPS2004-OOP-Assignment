@@ -11,30 +11,23 @@ class Order{
     private long timestamp;
     private boolean booked;
 
-    public static void book(String booker, String product, String type, int quantity, double price, long timestamp){
+    public static void book(String booker, String product, String type, int quantity, double price){
 
-
-        ArrayList<User> shallowCopy = new ArrayList<User>(User.returnList());
+        // check if user exists
+        ArrayList<User> userInstances = new ArrayList<User>(User.returnList());
         
-        if(shallowCopy.size() == 0){
+        if(userInstances.size() == 0){
             System.out.println("Error: user does not exist");
             return;
         }
 
-
-        for(int i = 0; i < shallowCopy.size(); ++i){
-            if(shallowCopy.get(i).returnUserName().equals(booker)){
-                if(shallowCopy.get(i).returnUserType().equals("lister")){
-                    System.out.println("Error: user is not a trader");
-                    return;
-                }
-
+        for(int i = 0; i < userInstances.size(); ++i){
+            if(userInstances.get(i).returnUserName().equals(booker)){
                 break;
             }
-            
-            else if(i == User.returnList().size() - 1){
+
+            else if(i == userInstances.size() - 1){
                 System.out.println("Error: user does not exist");
-                return;
             }
         }
 
@@ -47,7 +40,7 @@ class Order{
         instance.type = type;
         instance.quantity = quantity;
         instance.price = price;
-        instance.timestamp = timestamp;
+        instance.timestamp = System.currentTimeMillis();
         instance.booked = false;
 
         instances.add(instance);
