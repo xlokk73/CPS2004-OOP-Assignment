@@ -56,7 +56,6 @@ class Order{
 
         System.out.println("Error: order does not exist");
     }
-        
 
     public static void delete(String booker, String product, String type, int quantity, double price){
         for(int i = 0; i < instances.size(); ++i){
@@ -91,6 +90,13 @@ class Order{
         ArrayList<Order> listCopy = new ArrayList<Order>(instances);
         return listCopy;
     }
+
+    // returns extra quantity 
+    public void reduceQuantity(int howMuch){
+        resultingQuantity = this.quantity - howMuch;
+        this.quantity = resultingQuantity;
+    }
+
 
     public String returnProduct(){
         return product;

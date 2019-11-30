@@ -13,16 +13,16 @@ class Security{
 
         
         // check if lister is registered
-        ArrayList<User> shallowCopy = new ArrayList<User>(User.returnList());
+        ArrayList<User> userInstances = new ArrayList<User>(User.returnList());
 
-        if(shallowCopy.size() == 0){
+        if(userInstances.size() == 0){
             System.out.println("Error: user does not exist");
             return;
         }
 
-        for(int i = 0; i < shallowCopy.size(); ++i){
-            if(shallowCopy.get(i).returnUserName().equals(lister)){
-                if(shallowCopy.get(i).returnUserType().equals("trader")){
+        for(int i = 0; i < userInstances.size(); ++i){
+            if(userInstances.get(i).returnUserName().equals(lister)){
+                if(userInstances.get(i).returnUserType().equals("trader")){
                     System.out.println("Error: user is not a lister");
                     return;
                 }
