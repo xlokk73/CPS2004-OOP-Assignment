@@ -28,10 +28,11 @@ class Order{
 
             else if(i == userInstances.size() - 1){
                 System.out.println("Error: user does not exist");
+                return;
             }
         }
 
-
+        // check if user owns security
 
         Order instance = new Order();
 
@@ -89,12 +90,6 @@ class Order{
     public static ArrayList returnList(){
         ArrayList<Order> listCopy = new ArrayList<Order>(instances);
         return listCopy;
-    }
-
-    // returns extra quantity 
-    public void reduceQuantity(int howMuch){
-        resultingQuantity = this.quantity - howMuch;
-        this.quantity = resultingQuantity;
     }
 
 

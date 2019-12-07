@@ -67,14 +67,17 @@ class Main{
 
         int input = sc.nextInt();
 
+        System.out.println("Enter wallet:");
+        double wallet = sc.nextDouble();
+
         switch(input){
             case 1:
                 System.out.println("Registering " + inputName + " as lister");
-                User.create(inputName, "lister");
+                User.create(inputName, "lister", wallet);
                 break;
             case 2:
                 System.out.println("Registering " + inputName + " as trader");
-                User.create(inputName, "trader");
+                User.create(inputName, "trader", wallet);
                 break;
             default:
                 System.out.println("Error: invalid option");

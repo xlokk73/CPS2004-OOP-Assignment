@@ -1,12 +1,20 @@
 import java.util.ArrayList;
 
 class User{
+
+    private class Tuple{
+        public int quantity;
+        public String productName;
+    }
+
     private static ArrayList<User> instances = new ArrayList<User>();
 
     private String userName;
     private String userType;
+    private double wallet;
+    private ArrayList<Tuple> ownedProducts = new ArrayList<Tuple>();
 
-    public static void create(String name, String type){
+    public static void create(String name, String type, double wallet){
         User instance = new User();
 
         for(int i = 0; i < instances.size(); ++i){
@@ -20,6 +28,7 @@ class User{
         if(type == "trader" || type == "lister"){
             instance.userName = name;
             instance.userType = type;
+            instance.wallet = wallet;
 
             instances.add(instance);
 
@@ -35,6 +44,7 @@ class User{
         for(int i = 0; i < instances.size(); ++i){
             System.out.println("Name: " + instances.get(i).userName);
             System.out.println("Type: " + instances.get(i).userType);
+            System.out.println("Wallet: " + instances.get(i).wallet);
             System.out.println();
         }
     }
@@ -45,30 +55,53 @@ class User{
     }
 
     public String returnUserName(){
-        String nameCopy = new String(userName);
-        return nameCopy;
+        return userName;
     }
     
     public String returnUserType(){
-        String typeCopy = new String(userType);
-        return typeCopy;
+        return userType;
     }
 
-    public void listSecurity(String description, String product, double price, int supply){
-        if(this.userType == "trader"){
-            System.out.println("Error: trader can not list securities");
-            return;
-        }
-
-        Security.list(this.userName, product, description, price, supply);
+    public double returnWallet(){
+        return wallet;
     }
 
-    public void bookOrder(String product, String type, int quantity, double price){
-        if(this.userType == "lister"){
-            System.out.println("Error: lister can not book orders");
-            return;
-        }
+    public void subtractWallet(double howMuch){
+        wallet = wallet - howMuch;
+    }
 
-        Order.book(this.userName, product, type, quantity, price);
+    public void addWallet(double howMuch){
+        wallet = wallet + howMuch;
+    }
+
+    
+
+    public void addOwnedProduct(String productName, int howMuch){
+        // check if user already owns product
+
+        Tuple product = new Tuple();
+        product.quantity = howMuch;
+        product.productName = productName;
+
+        ownedProducts.add(product);
+    }
+
+    public void removeOwnedProduct(String productName, int howMuch){
+        for(int i = 0; i < ownedProducts.size(); ++i){
+            if(ownedProducts.get(i).productName.equals(productName)){
+                if(howMuch > ownedProducts.get(i).quantity){
+                    System.out.println("Error: insufficient ammount");
+                    return;
+                }
+
+                else if(howMuch == ownedProducts.get(i).quantity){
+                    ownedProducts.remove(i);
+                }
+
+                else{
+                    ownedProducts.get(i).quantity -= howMuch;
+                }
+            }
+        }
     }
 }
