@@ -13,6 +13,10 @@ class Order{
 
     public static void book(String booker, String product, String type, int quantity, double price){
 
+        
+        ArrayList<User.Tuple> ownedProducts = new ArrayList<User.Tuple>();
+        boolean isSeller = false;
+
         // check if user exists
         ArrayList<User> userInstances = new ArrayList<User>(User.returnList());
         
@@ -23,6 +27,11 @@ class Order{
 
         for(int i = 0; i < userInstances.size(); ++i){
             if(userInstances.get(i).returnUserName().equals(booker)){
+                if(userInstances.get(i).returnUserType().equals("seller")){
+                    isSeller = true;
+                    ownedProducts = new ArrayList<User.Tuple>(userInstances.get(i).returnOwnedProducts());
+                }
+                    
                 break;
             }
 
@@ -32,7 +41,24 @@ class Order{
             }
         }
 
-        // TODO check if user owns product in sell orders
+        // check if user owns product in sell orders
+        if(isSeller){
+            if(ownedProducts.size() == 0){
+                System.out.println("Error: user doesn't own product");
+                return;
+            }
+
+            for(int i = 0; i < ownedProducts.size(); ++i){
+                if(ownedProducts.get(i).returnProductName().equals(product) && ownedProducts.get(i).returnQuantity() > quantity){
+                    break;
+                }
+
+                else if(i == ownedProducts.size() - 1){
+                    System.out.println("Error: user doesn't own enough of this product to sell it");
+                    return;
+                }
+            }
+        }    
 
         Order instance = new Order();
 

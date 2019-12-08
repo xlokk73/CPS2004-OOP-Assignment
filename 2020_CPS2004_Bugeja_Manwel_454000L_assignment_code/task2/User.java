@@ -2,9 +2,17 @@ import java.util.ArrayList;
 
 class User{
 
-    private class Tuple{
-        public int quantity;
-        public String productName;
+    public class Tuple{
+        private int quantity;
+        private String productName;
+
+        public int returnQuantity(){
+            return quantity;
+        }
+
+        public String returnProductName(){
+            return productName;
+        }
     }
 
     private static ArrayList<User> instances = new ArrayList<User>();
@@ -74,6 +82,9 @@ class User{
         wallet = wallet + howMuch;
     }
 
+    public ArrayList returnOwnedProducts(){
+        return ownedProducts;
+    }
     
 
     public void addOwnedProduct(String productName, int howMuch){
