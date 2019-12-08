@@ -32,7 +32,7 @@ class Order{
             }
         }
 
-        // check if user owns security
+        // TODO check if user owns product in sell orders
 
         Order instance = new Order();
 
