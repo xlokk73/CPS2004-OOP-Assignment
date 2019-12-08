@@ -103,7 +103,7 @@ class User{
         ownedProducts.add(product);
     }
 
-    public void removeOwnedProduct(String productName, int howMuch){
+    public void subtractOwnedProduct(String productName, int howMuch){
         for(int i = 0; i < ownedProducts.size(); ++i){
             if(ownedProducts.get(i).productName.equals(productName)){
                 if(howMuch > ownedProducts.get(i).quantity){
