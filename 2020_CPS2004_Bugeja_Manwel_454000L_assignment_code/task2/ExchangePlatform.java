@@ -14,8 +14,17 @@ class ExchangePlatform{
                     if(orderInstances.get(j).returnType().equals("buy")){
 
                         if(orderInstances.get(i).returnProduct.equals(orderInstances.get(j).returnProduct)){
-                            //complete trade
-                            
+
+                            // readjust sell order
+
+                            // readjust buyer's wallet
+
+                            // readjust seller's wallet 
+
+                            // readjust buyer's owned product
+
+                            // readjust seller's owned product
+                        }
                     }
                 }
             }

@@ -56,7 +56,7 @@ class User{
 
     public String returnUserName(){
         return userName;
-    }
+   }
     
     public String returnUserType(){
         return userType;
@@ -78,6 +78,12 @@ class User{
 
     public void addOwnedProduct(String productName, int howMuch){
         // check if user already owns product
+        for(int i = 0; i < ownedProducts.size(); ++i){
+            if(ownedProducts.get(i).productName.equals(productName)){
+                ownedProducts.get(i).quantity += howMuch;
+                break;
+            }
+        }
 
         Tuple product = new Tuple();
         product.quantity = howMuch;
