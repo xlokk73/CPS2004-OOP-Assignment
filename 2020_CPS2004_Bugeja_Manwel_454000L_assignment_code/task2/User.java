@@ -76,6 +76,38 @@ class User{
         return 0;
     }
 
+    public static void subtractWallet(String userName, double howMuch){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).userName.equals(userName)){
+                instances.get(i).wallet -= howMuch;
+            }
+        }
+    }
+
+    public static void addWallet(String userName, double howMuch){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).userName.equals(userName)){
+                instances.get(i).wallet += howMuch;
+            }
+        }
+    }
+
+    public static void addOwnedProduct(String userName, String productName, int howMuch){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).userName.equals(userName)){
+                instances.get(i).addOwnedProduct(productName, howMuch);
+            }
+        }
+    }
+
+    public static void subtractOwnedProduct(String userName, String productName, int howMuch){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).userName.equals(userName)){
+                instances.get(i).subtractOwnedProduct(productName, howMuch);
+            }
+        }
+    }
+
     public String returnUserName(){
         return userName;
    }

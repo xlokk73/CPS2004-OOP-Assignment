@@ -51,7 +51,7 @@ class Main{
 
     public static void fnExchange(){
         System.out.println("exchanging");
-        // ExchangePlatform.exchange();
+        ExchangePlatform.exchange();
     }
 
     public static void fnRegister(){
