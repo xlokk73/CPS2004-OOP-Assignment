@@ -14,16 +14,28 @@ class ExchangePlatform{
                     if(orderInstances.get(j).returnType().equals("buy")){
 
                         if(orderInstances.get(i).returnProduct.equals(orderInstances.get(j).returnProduct)){
+                            
+                            // check sell quantity >= buy quantity
+                            // check buyer has enough money
 
-                            // readjust sell order
+                            if(orderInstances.get(i).returnQuantity() >= orderInstances.get(j).returnQuantity()
+                            && User.returnWallet(orderInstances.get(j).returnBooker()) >= orderInstances.get(j).quantity * orderInstances.get(j).returnPrice()){
+                                
+                                // readjust sell order
+                                orderInstances.get(i).subtract(orderInstances.get(j).returnQuantity());
 
-                            // readjust buyer's wallet
+                                // readjust buyer's wallet
+                                User.subtractWallet(orderInstances.get(j).quantity * orderInstances.get(j).returnPrice());
 
-                            // readjust seller's wallet 
+                                // readjust seller's wallet 
+                                User.addWallet(orderInstances.get(j).quantity * orderInstances.get(j).returnPrice());
 
-                            // readjust buyer's owned product
+                                // readjust buyer's owned product
+                                User.addOwnedProduct(orderInstances.get(j).returnProduct(), orderInstances.get(j).returnQuantity());
 
-                            // readjust seller's owned product
+                                // readjust seller's owned product
+                                User.subtractOwnedProduct(orderInstances.get(j).returnProduct(), orderInstances.get(j).returnQuantity());
+                            }
                         }
                     }
                 }

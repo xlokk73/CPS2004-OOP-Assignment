@@ -118,6 +118,23 @@ class Order{
         return listCopy;
     }
 
+    public void addQuanity(int howMuch){
+        this.quantity += howMuch;
+    }
+
+    public void subtractQuantity(int howMuch){
+        if(howMuch > this.quantity){
+            System.out.println("Error: not enough supply");
+        }
+
+        else if(howMuch == this.quantity){
+            Order.delete(this);
+        }
+
+        else{
+            this.quantity -= howMuch;
+        }
+    }
 
     public String returnProduct(){
         return product;
@@ -129,6 +146,10 @@ class Order{
 
     public int returnQuantity(){
         return quantity;
+    }
+
+    public double returnPrice(){
+        return price;
     }
 
     public boolean isBooked(){

@@ -62,6 +62,20 @@ class User{
         return listCopy;
     }
 
+    public static double returnWallet(String userName){
+        if(instances.size() == 0){
+            return 0;
+        }
+
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).userName.equals(userName)){
+                return instances.get(i).wallet;
+            }
+        }
+
+        return 0;
+    }
+
     public String returnUserName(){
         return userName;
    }
