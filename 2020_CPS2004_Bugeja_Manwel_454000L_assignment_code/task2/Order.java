@@ -12,7 +12,6 @@ class Order{
     private boolean booked;
 
     public static void book(String booker, String product, String type, int quantity, double price){
-
         
         ArrayList<User.Tuple> ownedProducts = new ArrayList<User.Tuple>();
         boolean isSeller = false;

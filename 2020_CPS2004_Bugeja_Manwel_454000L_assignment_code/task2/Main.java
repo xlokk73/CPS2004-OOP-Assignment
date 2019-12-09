@@ -126,8 +126,10 @@ class Main{
         switch(input){
             case 1:
                 type = "buy";
+                break;
             case 2:
                 type = "sell";
+                break;
         }
 
         System.out.print("Enter quantity: ");
@@ -158,8 +160,10 @@ class Main{
         switch(input){
             case 1:
                 type = "buy";
+                break;
             case 2:
                 type = "sell";
+                break;
         }
 
         System.out.print("Enter quantity: ");
