@@ -79,6 +79,7 @@ class User{
     public static void subtractWallet(String userName, double howMuch){
         for(int i = 0; i < instances.size(); ++i){
             if(instances.get(i).userName.equals(userName)){
+                System.out.println(userName + "subtracting from wallet");
                 instances.get(i).wallet -= howMuch;
             }
         }
@@ -87,6 +88,7 @@ class User{
     public static void addWallet(String userName, double howMuch){
         for(int i = 0; i < instances.size(); ++i){
             if(instances.get(i).userName.equals(userName)){
+                System.out.println(userName + "adding to wallet");
                 instances.get(i).wallet += howMuch;
             }
         }
