@@ -21,8 +21,6 @@ class ExchangePlatform{
                             if(orderInstances.get(i).returnQuantity() >= orderInstances.get(j).returnQuantity()
                             && User.returnWallet(orderInstances.get(j).returnBooker()) >= orderInstances.get(j).returnQuantity() * orderInstances.get(j).returnPrice()){
 
-                            System.out.println("HERE");
-                                
                                 // readjust sell order
                                 orderInstances.get(i).subtractQuantity(orderInstances.get(j).returnQuantity());
 

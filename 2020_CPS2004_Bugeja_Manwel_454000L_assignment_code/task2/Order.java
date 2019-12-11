@@ -74,7 +74,8 @@ class Order{
 
     public static void delete(Order o){
         for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).product.equals(o.product)){
+            if(instances.get(i).product.equals(o.product)
+            && instances.get(i).type.equals(o.type)){
                 instances.remove(i);
                 return;
             }
@@ -122,16 +123,19 @@ class Order{
     }
 
     public void subtractQuantity(int howMuch){
-        if(howMuch > this.quantity){
+        System.out.println("Subtracting quantity");
+        if(howMuch > quantity){
             System.out.println("Error: not enough supply");
         }
 
-        else if(howMuch == this.quantity){
+        else if(howMuch == quantity){
+            System.out.println("Case: howMuch == quantity");
             Order.delete(this);
         }
 
         else{
-            this.quantity -= howMuch;
+            System.out.println("Case: howMuch < quantity");
+            quantity -= howMuch;
         }
     }
 
