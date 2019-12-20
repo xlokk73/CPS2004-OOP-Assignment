@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/ImmutableLinkedList.h
+ImmutableList.h
+/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/ImmutableList.h
+iostream
+-
+
+/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/ImmutableList.h
+
+/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/main.cpp
+iostream
+-
+ImmutableLinkedList.h
+/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/ImmutableLinkedList.h
+
