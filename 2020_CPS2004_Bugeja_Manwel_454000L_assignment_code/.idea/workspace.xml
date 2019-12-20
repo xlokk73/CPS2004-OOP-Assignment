@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code" targetName="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -9,32 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df82009b-5065-4a7b-863c-137383686f6a" name="Default Changelist" comment="">
+    <list default="true" id="bd7b483f-36ee-436c-bcbc-e37717a612b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/immutablelist.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/immutablelist.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/compile.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/immutablelist.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/testing/compile.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/testing/immutable_list.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/testing/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1copy/testing/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/ExchangePlatform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/ExchangePlatform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/Security.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/Security.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/User$Tuple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/compile.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2copy/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/compile.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task2/ImmutableLinkedList.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task2/ImmutableList.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task2/compile.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task2/main.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +31,11 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CMakeLists.txt" />
-      </list>
-    </option>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1VDnZSRulylmWqFfLGKgD3kmVpi" />
+  <component name="ProjectId" id="1VG5qPbYw8MMtDp9rsHjyvyKpXz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,6 +45,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code" TARGET_NAME="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code" RUN_TARGET_NAME="2020_CPS2004_Bugeja_Manwel_454000L_assignment_code">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -82,13 +70,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df82009b-5065-4a7b-863c-137383686f6a" name="Default Changelist" comment="" />
-      <created>1576796588098</created>
+      <changelist id="bd7b483f-36ee-436c-bcbc-e37717a612b0" name="Default Changelist" comment="" />
+      <created>1576866781449</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576796588098</updated>
-      <workItem from="1576796589418" duration="420000" />
-      <workItem from="1576862046434" duration="83000" />
+      <updated>1576866781449</updated>
+      <workItem from="1576866782913" duration="2000" />
     </task>
     <servers />
   </component>

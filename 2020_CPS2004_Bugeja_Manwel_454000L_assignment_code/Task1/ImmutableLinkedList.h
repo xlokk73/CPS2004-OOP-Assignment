@@ -2,10 +2,11 @@
 // Created by Manwel Bugeja on 20/12/2019.
 //
 
-#ifndef TASK2_IMMUTABLELINKEDLIST_H
-#define TASK2_IMMUTABLELINKEDLIST_H
+#ifndef TASK1_IMMUTABLELINKEDLIST_H
+#define TASK1_IMMUTABLELINKEDLIST_H
 
 #include "ImmutableList.h"
+#include <iostream>
 
 template <typename T>
 class ImmutableLinkedList : public ImmutableList<T> {
@@ -78,5 +79,4 @@ ImmutableLinkedList<T>* ImmutableLinkedList<T>::clear() const {
 }
 
 
-
-#endif //TASK2_IMMUTABLELINKEDLIST_H
+#endif //TASK1_IMMUTABLELINKEDLIST_H

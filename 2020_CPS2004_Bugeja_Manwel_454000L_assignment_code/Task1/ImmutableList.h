@@ -2,8 +2,9 @@
 // Created by Manwel Bugeja on 20/12/2019.
 //
 
-#ifndef TASK2_IMMUTABLELIST_H
-#define TASK2_IMMUTABLELIST_H
+#ifndef TASK1_IMMUTABLELIST_H
+#define TASK1_IMMUTABLELIST_H
+
 
 template<typename T>
 class ImmutableList {
@@ -16,4 +17,5 @@ public:
 };
 
 
-#endif //TASK2_IMMUTABLELIST_H
+
+#endif //TASK1_IMMUTABLELIST_H
