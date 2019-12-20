@@ -12,6 +12,7 @@ public:
     virtual ImmutableList<T>* push(T) const = 0;
     virtual ImmutableList<T>* pop() const = 0;
     virtual ImmutableList<T>* clear() const = 0;
+    virtual void print() const = 0;
 };
 
 
