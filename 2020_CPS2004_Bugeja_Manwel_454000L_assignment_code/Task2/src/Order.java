@@ -9,7 +9,6 @@ class Order{
     private int quantity;
     private double price;
     private long timestamp;
-    private boolean booked;
 
     public static void book(String booker, String product, String type, int quantity, double price){
         
@@ -67,7 +66,6 @@ class Order{
         instance.quantity = quantity;
         instance.price = price;
         instance.timestamp = System.currentTimeMillis();
-        instance.booked = false;
 
         instances.add(instance);
     }
@@ -158,11 +156,4 @@ class Order{
         return price;
     }
 
-    public boolean isBooked(){
-        return booked;
-    }
-
-    public void completeBooking(){
-        booked = true;
-    }
 }

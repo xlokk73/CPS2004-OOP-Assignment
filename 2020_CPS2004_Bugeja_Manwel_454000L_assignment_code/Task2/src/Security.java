@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 class Security{
-    private static ArrayList<Security> instances = new ArrayList<Security>();
+    private static ArrayList<Security> instances = new ArrayList<>();
 
     private String lister;
     private String product;
@@ -41,8 +41,8 @@ class Security{
         ArrayList<Security> securitiesCopy = new ArrayList<Security>(Security.returnList());
 
 
-        for(int i = 0; i < securitiesCopy.size(); ++i){
-            if(securitiesCopy.get(i).product.equals(product)){
+        for (Security security : securitiesCopy) {
+            if (security.product.equals(product)) {
                 System.out.println("Error: security already exists");
                 return;
             }
@@ -62,21 +62,16 @@ class Security{
 
         //book initial sell order for security
         Order.book(lister, product, "sell", supply, price);
-        ArrayList<Order> orderInstances = Order.returnList();
-        for(int i = 0; i < orderInstances.size(); ++i){
-            if(orderInstances.get(i).returnProduct().equals(product)){
-                orderInstances.get(i).completeBooking();
-            }
-        }
+
     }
 
     public static void showInstances(){
-        for(int i = 0; i < instances.size(); ++i){
-            System.out.println("Lister: " + instances.get(i).lister);
-            System.out.println("Product: " + instances.get(i).product);
-            System.out.println("Description: " + instances.get(i).description);
-            System.out.println("Price: " + instances.get(i).price);
-            System.out.println("Supply: " + instances.get(i).supply);
+        for (Security instance : instances) {
+            System.out.println("Lister: " + instance.lister);
+            System.out.println("Product: " + instance.product);
+            System.out.println("Description: " + instance.description);
+            System.out.println("Price: " + instance.price);
+            System.out.println("Supply: " + instance.supply);
             System.out.println();
         }
     }
@@ -86,8 +81,7 @@ class Security{
     }
 
     public static ArrayList returnList(){
-        ArrayList<Security> listCopy = new ArrayList<Security>(instances);
-        return listCopy;
+        return instances;
     }
 
     public String returnProduct(){

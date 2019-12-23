@@ -10,34 +10,34 @@ class ExchangePlatform{
             if(orderInstances.get(i).returnType().equals("sell")){
                 
                 // find wich buy orders qualify
-                for(int j = 0; j < orderInstances.size(); ++j){
-                    if(orderInstances.get(j).returnType().equals("buy")){
+                for (Order orderInstance : orderInstances) {
+                    if (orderInstance.returnType().equals("buy")) {
 
-                        if(orderInstances.get(i).returnProduct().equals(orderInstances.get(j).returnProduct())){
-                            
+                        if (orderInstances.get(i).returnProduct().equals(orderInstance.returnProduct())) {
+
                             // check sell quantity >= buy quantity
                             // check buyer has enough money
 
-                            if(orderInstances.get(i).returnQuantity() >= orderInstances.get(j).returnQuantity()
-                            && User.returnWallet(orderInstances.get(j).returnBooker()) >= orderInstances.get(j).returnQuantity() * orderInstances.get(j).returnPrice()){
+                            if (orderInstances.get(i).returnQuantity() >= orderInstance.returnQuantity()
+                                    && User.returnWallet(orderInstance.returnBooker()) >= orderInstance.returnQuantity() * orderInstance.returnPrice()) {
 
                                 // readjust sell order
-                                orderInstances.get(i).subtractQuantity(orderInstances.get(j).returnQuantity());
+                                orderInstances.get(i).subtractQuantity(orderInstance.returnQuantity());
 
                                 // readjust buyer's wallet
-                                User.subtractWallet(orderInstances.get(j).returnBooker(), orderInstances.get(j).returnQuantity() * orderInstances.get(j).returnPrice());
+                                User.subtractWallet(orderInstance.returnBooker(), orderInstance.returnQuantity() * orderInstance.returnPrice());
 
-                                // readjust seller's wallet 
-                                User.addWallet(orderInstances.get(i).returnBooker(), orderInstances.get(j).returnQuantity() * orderInstances.get(j).returnPrice());
+                                // readjust seller's wallet
+                                User.addWallet(orderInstances.get(i).returnBooker(), orderInstance.returnQuantity() * orderInstance.returnPrice());
 
                                 // readjust buyer's owned product
-                                User.addOwnedProduct(orderInstances.get(i).returnBooker(), orderInstances.get(j).returnProduct(), orderInstances.get(j).returnQuantity());
+                                User.addOwnedProduct(orderInstances.get(i).returnBooker(), orderInstance.returnProduct(), orderInstance.returnQuantity());
 
                                 // readjust seller's owned product
-                                User.subtractOwnedProduct(orderInstances.get(i).returnBooker(), orderInstances.get(j).returnProduct(), orderInstances.get(j).returnQuantity());
+                                User.subtractOwnedProduct(orderInstances.get(i).returnBooker(), orderInstance.returnProduct(), orderInstance.returnQuantity());
 
                                 // remove buy order
-                                Order.delete(orderInstances.get(j));
+                                Order.delete(orderInstance);
                             }
                         }
                     }

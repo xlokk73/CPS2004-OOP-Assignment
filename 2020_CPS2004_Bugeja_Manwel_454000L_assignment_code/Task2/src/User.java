@@ -15,18 +15,18 @@ class User{
         }
     }
 
-    private static ArrayList<User> instances = new ArrayList<User>();
+    private static ArrayList<User> instances = new ArrayList<>();
 
     private String userName;
     private String userType;
     private double wallet;
-    private ArrayList<Tuple> ownedProducts = new ArrayList<Tuple>();
+    private ArrayList<Tuple> ownedProducts = new ArrayList<>();
 
     public static void create(String name, String type, double wallet){
         User instance = new User();
 
-        for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName.equals(name)){
+        for (User user : instances) {
+            if (user.userName.equals(name)) {
                 System.out.println("Error: User already exists");
                 return;
             }
@@ -49,17 +49,16 @@ class User{
     }
 
     public static void showInstances(){
-        for(int i = 0; i < instances.size(); ++i){
-            System.out.println("Name: " + instances.get(i).userName);
-            System.out.println("Type: " + instances.get(i).userType);
-            System.out.println("Wallet: " + instances.get(i).wallet);
+        for (User instance : instances) {
+            System.out.println("Name: " + instance.userName);
+            System.out.println("Type: " + instance.userType);
+            System.out.println("Wallet: " + instance.wallet);
             System.out.println();
         }
     }
 
     public static ArrayList returnList(){
-        ArrayList<User> listCopy = new ArrayList<User>(instances);
-        return listCopy;
+        return instances;
     }
 
     public static double returnWallet(String userName){
@@ -67,9 +66,9 @@ class User{
             return 0;
         }
 
-        for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName.equals(userName)){
-                return instances.get(i).wallet;
+        for (User instance : instances) {
+            if (instance.userName.equals(userName)) {
+                return instance.wallet;
             }
         }
 
@@ -77,33 +76,33 @@ class User{
     }
 
     public static void subtractWallet(String userName, double howMuch){
-        for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName.equals(userName)){
-                instances.get(i).wallet -= howMuch;
+        for (User instance : instances) {
+            if (instance.userName.equals(userName)) {
+                instance.wallet -= howMuch;
             }
         }
     }
 
     public static void addWallet(String userName, double howMuch){
-        for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName.equals(userName)){
-                instances.get(i).wallet += howMuch;
+        for (User instance : instances) {
+            if (instance.userName.equals(userName)) {
+                instance.wallet += howMuch;
             }
         }
     }
 
     public static void addOwnedProduct(String userName, String productName, int howMuch){
-        for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName.equals(userName)){
-                instances.get(i).addOwnedProduct(productName, howMuch);
+        for (User instance : instances) {
+            if (instance.userName.equals(userName)) {
+                instance.addOwnedProduct(productName, howMuch);
             }
         }
     }
 
     public static void subtractOwnedProduct(String userName, String productName, int howMuch){
-        for(int i = 0; i < instances.size(); ++i){
-            if(instances.get(i).userName.equals(userName)){
-                instances.get(i).subtractOwnedProduct(productName, howMuch);
+        for (User instance : instances) {
+            if (instance.userName.equals(userName)) {
+                instance.subtractOwnedProduct(productName, howMuch);
             }
         }
     }
@@ -135,9 +134,9 @@ class User{
 
     public void addOwnedProduct(String productName, int howMuch){
         // check if user already owns product
-        for(int i = 0; i < ownedProducts.size(); ++i){
-            if(ownedProducts.get(i).productName.equals(productName)){
-                ownedProducts.get(i).quantity += howMuch;
+        for (Tuple ownedProduct : ownedProducts) {
+            if (ownedProduct.productName.equals(productName)) {
+                ownedProduct.quantity += howMuch;
                 break;
             }
         }
