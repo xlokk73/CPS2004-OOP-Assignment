@@ -33,7 +33,7 @@ class User{
         }
 
 
-        if(type == "trader" || type == "lister"){
+        if(type.equals("trader") || type.equals("lister")){
             instance.userName = name;
             instance.userType = type;
             instance.wallet = wallet;
@@ -120,11 +120,15 @@ class User{
     }
 
     public void subtractWallet(double howMuch){
-        wallet = wallet - howMuch;
+        if(howMuch >= 0) {
+            wallet = wallet - howMuch;
+        }
     }
 
     public void addWallet(double howMuch){
-        wallet = wallet + howMuch;
+        if(howMuch >= 0) {
+            wallet = wallet + howMuch;
+        }
     }
 
     public ArrayList returnOwnedProducts(){
