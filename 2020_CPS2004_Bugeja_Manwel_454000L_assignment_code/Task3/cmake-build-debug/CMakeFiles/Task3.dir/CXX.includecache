@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task3/main.cpp
+iostream
+-
+
