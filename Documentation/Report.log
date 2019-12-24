@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  20 DEC 2019 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  24 DEC 2019 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -119,8 +119,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box29
 \@float@everytoks=\toks18
 \@floatcapt=\box30
-)
-No file Report.aux.
+) (./Report.aux)
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -135,6 +134,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
+
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
@@ -216,30 +216,37 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Logo.
-jpg>]
-No file Report.toc.
+jpg>] (./Report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+)
 \tf@toc=\write3
 \openout3 = `Report.toc'.
 
-[1
+ [1
 
-] [2] (./Report.aux) ) 
+] [2]
+[3] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 3012 strings out of 492616
- 43848 string characters out of 6129480
- 107337 words of memory out of 5000000
- 6920 multiletter control sequences out of 15000+600000
- 6362 words of font info for 23 fonts, out of 8000000 for 9000
+ 3035 strings out of 492616
+ 44107 string characters out of 6129480
+ 109337 words of memory out of 5000000
+ 6933 multiletter control sequences out of 15000+600000
+ 9414 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,32p,273b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb>
-Output written on Report.pdf (3 pages, 459224 bytes).
+ 41i,6n,32p,524b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb>
+Output written on Report.pdf (4 pages, 468249 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 30 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
