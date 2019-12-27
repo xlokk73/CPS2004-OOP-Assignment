@@ -1,0 +1,169 @@
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+2
+registering
+Enter name
+Manwel
+Please select type:
+1. lister
+2. trader
+1
+Enter wallet:
+200000
+Registering Manwel as lister
+Registered lister
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+2
+registering
+Enter name
+Christian
+Please select type:
+1. lister
+2. trader
+2
+Enter wallet:
+200000
+Registering Christian as trader
+Registered trader
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+3
+listing
+Enter user: Manwel
+Enter product: building
+Enter description: buildings in mxlokk
+Enter price: 100
+Enter supply: 5
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+4
+booking
+Enter user: Christian
+Enter product: building
+Select a type:
+1. Buy
+2. Sell
+1
+Enter quantity: 3
+Enter price: 1000
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+6
+Users:
+Name: Manwel
+Type: lister
+Wallet: 200000.0
+
+Name: Christian
+Type: trader
+Wallet: 200000.0
+
+
+Securities:
+Lister: Manwel
+Product: building
+Description: buildings in mxlokk
+Price: 100.0
+Supply: 5
+
+
+Orders:
+Booker: Manwel
+Product: building
+Type: sell
+Quantity: 5
+Price: 100.0
+Timestamp: 1577462020210
+
+Booker: Christian
+Product: building
+Type: buy
+Quantity: 3
+Price: 1000.0
+Timestamp: 1577462045590
+
+
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+1
+exchanging
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all
+
+6
+Users:
+Name: Manwel
+Type: lister
+Wallet: 203000.0
+
+Name: Christian
+Type: trader
+Wallet: 197000.0
+
+
+Securities:
+Lister: Manwel
+Product: building
+Description: buildings in mxlokk
+Price: 100.0
+Supply: 5
+
+
+Orders:
+Booker: Manwel
+Product: building
+Type: sell
+Quantity: 2
+Price: 100.0
+Timestamp: 1577462020210
+
+
+0. quit
+1. exchange
+2. register
+3. list
+4. book
+5. cancel order
+6. show all

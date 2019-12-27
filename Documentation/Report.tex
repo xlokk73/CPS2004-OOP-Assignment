@@ -59,7 +59,7 @@ The list was also tested concurrently. A function was created that receives a li
 
 \section{Task 2}
 
-\subsubsection{The Design}
+\subsection{The Design}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{"UML 2"}
@@ -70,10 +70,15 @@ For this task, three classes: Order, Security and User were created and each con
 \linebreak
 The matching engine simply compares all sell orders with buy orders, checks when the product matches, and if the amount of the buy is less than or equal to the amount of the sell, it completes the trade and adjust the required fields.
 
-\subsubsection{Testing}
+\subsection{Testing}
 
-\subsubsection{Limitations}
+\lstinputlisting[caption=Task 2 sample output, frame=single]{"Task 2 sample output.txt"}
+
+\subsection{Limitations}
 For a large amount of orders, it would have been better if they were stored in a separate ArrayLists, because as it is, the matching engine has to go through all orders twice. This is very inefficient as opposed to comparing the list of sell orders with the list of buy orders.
+
+\subsection{Polymorphism}
+To implement the log, a class can be created with a new list structure with only an add method (and no remove). Every time 'book()' or 'list()' or 'removeOrder()' is called, the action is added to this new list. Tampering this list can be avoided with proper encapsulation.
 
 \section{Task 3}
 
