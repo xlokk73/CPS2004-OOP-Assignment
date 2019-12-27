@@ -1,3 +1,9 @@
+// Created by Manwel Bugeja on 27/12/2019.
+//
+
+#ifndef TASK3_EXPRESSION_H
+#define TASK3_EXPRESSION_H
+
 // Expressions
 template <typename L, typename BinOp, typename R>
 class Expr {
@@ -86,3 +92,5 @@ template <typename L, typename R>
 Expr<L, Subtract, R> operator-(const L& l, const R& r) {
     return Expr<L, Subtract, R>(l, r);
 };
+
+#endif //TASK3_EXPRESSION_H

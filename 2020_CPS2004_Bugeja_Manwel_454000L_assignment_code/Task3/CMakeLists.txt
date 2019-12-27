@@ -3,4 +3,4 @@ project(Task3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Task3 main.cpp Expression.h)
+add_executable(Task3 main.cpp Expression.h Integral.h)

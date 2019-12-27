@@ -81,6 +81,9 @@
 		<Unit filename="/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task3/Expression.h">
 			<Option target="Task3"/>
 		</Unit>
+		<Unit filename="/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task3/Integral.h">
+			<Option target="Task3"/>
+		</Unit>
 		<Unit filename="/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task3/main.cpp">
 			<Option target="Task3"/>
 		</Unit>
