@@ -14,12 +14,12 @@ double integrate(Expr<L, BinOp, R> expr, double lower, double upper, double divs
     double y0 = expr.eval(lower);
     double yn = expr.eval(lower + divs * h);
 
-    double sum1 = 0, sum2 = 0;
+    double sum;
     for (int i = 1; i < divs; ++i) {
-        sum1 = sum1 + expr.eval(lower + i * h);
+        sum = sum + expr.eval(lower + i * h);
     }
 
-    return (h/2)*(y0 + yn + 2*sum1);
+    return (h/2)*(y0 + yn + 2*sum);
 }
 
 
