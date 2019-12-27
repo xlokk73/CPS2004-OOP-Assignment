@@ -1,4 +1,4 @@
-//
+//c
 // Created by Manwel Bugeja on 20/12/2019.
 //
 
@@ -15,7 +15,6 @@ public:
     virtual ImmutableList<T>* clear() const = 0;
     virtual void print() const = 0;
 };
-
 
 
 #endif //TASK1_IMMUTABLELIST_H
