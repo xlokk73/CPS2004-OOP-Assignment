@@ -11,12 +11,12 @@ class Order{
     private long timestamp;
 
     public static void book(String booker, String product, String type, int quantity, double price){
-        
+
         ArrayList<User.Tuple> ownedProducts = new ArrayList<>();
         boolean isSeller = false;
 
         // check if user exists
-        ArrayList<User> userInstances = new ArrayList<User>(User.returnList());
+        ArrayList<User> userInstances = new ArrayList<>(User.returnList());
         
         if(userInstances.size() == 0){
             System.out.println("Error: user does not exist");
@@ -120,18 +120,15 @@ class Order{
     }
 
     public void subtractQuantity(int howMuch){
-        System.out.println("Subtracting quantity");
         if(howMuch > quantity){
             System.out.println("Error: not enough supply");
         }
 
         else if(howMuch == quantity){
-            System.out.println("Case: howMuch == quantity");
             Order.delete(this);
         }
 
         else{
-            System.out.println("Case: howMuch < quantity");
             quantity -= howMuch;
         }
     }

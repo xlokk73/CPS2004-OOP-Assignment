@@ -13,7 +13,7 @@ class Security{
 
         
         // check if lister is registered
-        ArrayList<User> userInstances = new ArrayList<User>(User.returnList());
+        ArrayList<User> userInstances = new ArrayList<>(User.returnList());
 
         if(userInstances.size() == 0){
             System.out.println("Error: user does not exist");
@@ -38,7 +38,7 @@ class Security{
 
         
         // check if security is already listed
-        ArrayList<Security> securitiesCopy = new ArrayList<Security>(Security.returnList());
+        ArrayList<Security> securitiesCopy = new ArrayList<>(Security.returnList());
 
 
         for (Security security : securitiesCopy) {
