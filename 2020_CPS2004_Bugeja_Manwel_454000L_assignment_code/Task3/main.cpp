@@ -123,55 +123,16 @@
 //}
 
 #include <iostream>
-
-template <typename L, typename BinOp, typename R>
-class Expr {
-    L l_;
-    R r_;
-
-public:
-    Expr(const L& l, const R& r) : l_(l), r_(r) {};
-    double eval(double n) {
-        return BinOp::apply(l_.eval(n), r_.eval(n));
-    }
-};
-
-class X {
-public:
-    double static eval(double x) {
-        return x;
-    }
-};
-
-class C {
-    double c;
-public:
-    explicit C(double d) : c(d) {}
-
-    double eval(double) {
-        return c;
-    }
-};
-
-class Plus {
-public:
-    template <typename L, typename R>
-    inline static double apply(L a, R b) {
-        return (a + b);
-    }
-};
-
-template <typename L, typename R>
-Expr<L, Plus, R> operator+(const L& l, const R& r) {
-    return Expr<L, Plus, R>(l, r);
-};
-
+#include "Expression.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-    double res = ((X() + X()) + C(2)).eval(23);
+    // (10/x) + (2*x) when x = 4
+    // = 10.5
+    double res = ((C(10) / X()) + (C(2) * X())).eval(4);
     std::cout << res << std::endl;
+
 
     return 0;
 }

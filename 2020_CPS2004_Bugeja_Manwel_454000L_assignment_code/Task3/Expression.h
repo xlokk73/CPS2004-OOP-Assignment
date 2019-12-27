@@ -1,138 +1,88 @@
-////
-//// Created by Manwel Bugeja on 21/12/2019.
-////
-//
-//#ifndef TASK3_EXPRESSION_H
-//#define TASK3_EXPRESSION_H
-//
-//
-//class Expression {
-//
-//};
-//
-//
-//#endif //TASK3_EXPRESSION_H
-
-#include <cassert>
-#include <iostream>
-#include <vector>
-
-template<typename T, typename Cont= std::vector<T> >
-class MyVector{
-    Cont cont;
+// Expressions
+template <typename L, typename BinOp, typename R>
+class Expr {
+    L l_;
+    R r_;
 
 public:
-    // MyVector with initial size
-    MyVector(const std::size_t n) : cont(n){}
-
-    // MyVector with initial size and value
-    MyVector(const std::size_t n, const double initialValue) : cont(n, initialValue){}
-
-    // Constructor for underlying container
-    MyVector(const Cont& other) : cont(other){}
-
-    // assignment operator for MyVector of different type
-    template<typename T2, typename R2>
-    MyVector& operator=(const MyVector<T2, R2>& other){
-        assert(size() == other.size());
-        for (std::size_t i = 0; i < cont.size(); ++i) cont[i] = other[i];
-        return *this;
-    }
-
-    // size of underlying container
-    std::size_t size() const{
-        return cont.size();
-    }
-
-    // index operators
-    T operator[](const std::size_t i) const{
-        return cont[i];
-    }
-
-    T& operator[](const std::size_t i){
-        return cont[i];
-    }
-
-    // returns the underlying data
-    const Cont& data() const{
-        return cont;
-    }
-
-    Cont& data(){
-        return cont;
+    Expr(const L& l, const R& r) : l_(l), r_(r) {};
+    double eval(double n) {
+        return BinOp::apply(l_.eval(n), r_.eval(n));
     }
 };
 
-// MyVector + MyVector
-template<typename T, typename Op1 , typename Op2>
-class MyVectorAdd{
-    const Op1& op1;
-    const Op2& op2;
-
+class X {
 public:
-    MyVectorAdd(const Op1& a, const Op2& b): op1(a), op2(b){}
-
-    T operator[](const std::size_t i) const{
-        return op1[i] + op2[i];
-    }
-
-    std::size_t size() const{
-        return op1.size();
+    double static eval(double x) {
+        return x;
     }
 };
 
-// elementwise MyVector * MyVector
-template< typename T, typename Op1 , typename Op2 >
-class MyVectorMul {
-    const Op1& op1;
-    const Op2& op2;
-
+class C {
+    double c;
 public:
-    MyVectorMul(const Op1& a, const Op2& b ): op1(a), op2(b){}
+    explicit C(double d) : c(d) {}
 
-    T operator[](const std::size_t i) const{
-        return op1[i] * op2[i];
-    }
-
-    std::size_t size() const{
-        return op1.size();
+    double eval(double) {
+        return c;
     }
 };
 
-// function template for the + operator
-template<typename T, typename R1, typename R2>
-MyVector<T, MyVectorAdd<T, R1, R2> >
-operator+ (const MyVector<T, R1>& a, const MyVector<T, R2>& b){
-    return MyVector<T, MyVectorAdd<T, R1, R2> >(MyVectorAdd<T, R1, R2 >(a.data(), b.data()));
-}
 
-// function template for the * operator
-template<typename T, typename R1, typename R2>
-MyVector<T, MyVectorMul< T, R1, R2> >
-operator* (const MyVector<T, R1>& a, const MyVector<T, R2>& b){
-    return MyVector<T, MyVectorMul<T, R1, R2> >(MyVectorMul<T, R1, R2 >(a.data(), b.data()));
-}
 
-// function template for < operator
-template<typename T>
-std::ostream& operator<<(std::ostream& os, const MyVector<T>& cont){
-    std::cout << std::endl;
-    for (int i=0; i<cont.size(); ++i) {
-        os << cont[i] << ' ';
+// Addition operator
+class Plus {
+public:
+    template <typename L, typename R>
+    inline static double apply(L a, R b) {
+        return (a + b);
     }
-    os << std::endl;
-    return os;
-}
+};
 
-int main(){
+template <typename L, typename R>
+Expr<L, Plus, R> operator+(const L& l, const R& r) {
+    return Expr<L, Plus, R>(l, r);
+};
 
-    MyVector<double> x(10,5.4);
-    MyVector<double> y(10,10.3);
+// Multiplication operator
+class Multiply {
+public:
+    template <typename L, typename R>
+    inline static double apply(L a, R b) {
+        return (a * b);
+    }
+};
 
-    MyVector<double> result(10);
+template <typename L, typename R>
+Expr<L, Multiply, R> operator*(const L& l, const R& r) {
+    return Expr<L, Multiply, R>(l, r);
+};
 
-    result= x+x + y*y;
+// Division operator
+class Divide {
+public:
+    template <typename L, typename R>
+    inline static double apply(L a, R b) {
+        return (a / b);
+    }
+};
 
-    std::cout << result << std::endl;
+template <typename L, typename R>
+Expr<L, Divide, R> operator/(const L& l, const R& r) {
+    return Expr<L, Divide, R>(l, r);
+};
 
-}
+
+// Subtraction operator
+class Subtract {
+public:
+    template <typename L, typename R>
+    inline static double apply(L a, R b) {
+        return (a - b);
+    }
+};
+
+template <typename L, typename R>
+Expr<L, Subtract, R> operator-(const L& l, const R& r) {
+    return Expr<L, Subtract, R>(l, r);
+};
