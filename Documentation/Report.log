@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  24 DEC 2019 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  27 DEC 2019 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -209,14 +209,15 @@ File: Logo.jpg Graphic file (type jpg)
 <use Logo.jpg>
 Package pdftex.def Info: Logo.jpg  used on input line 18.
 (pdftex.def)             Requested size: 390.0pt x 134.57204pt.
+ [1
+
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Logo.
+jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 24.
- [1
-
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Logo.
-jpg>] (./Report.toc
+ [1] (./Report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -230,28 +231,46 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 ]
-Overfull \hbox (1.4626pt too wide) in paragraph at lines 48--49
+<"UML 1".png, id=16, 161.60374pt x 332.24126pt>
+File: "UML 1".png Graphic file (type png)
+<use "UML 1".png>
+Package pdftex.def Info: "UML 1".png  used on input line 35.
+(pdftex.def)             Requested size: 161.60335pt x 332.24043pt.
+
+[2 <./UML 1.png>]
+Overfull \hbox (1.4626pt too wide) in paragraph at lines 55--56
 \OT1/cmr/m/n/12 dif-fer-ent value passed as a pa-ram-e-ter. All three lists wer
 e printed as should.  
  []
 
-[2] [3] (./Report.aux) ) 
+<"UML 2".png, id=22, 613.29124pt x 365.365pt>
+File: "UML 2".png Graphic file (type png)
+<use "UML 2".png>
+Package pdftex.def Info: "UML 2".png  used on input line 64.
+(pdftex.def)             Requested size: 390.0pt x 232.3387pt.
+[3]
+<"UML 3".png, id=26, 683.55376pt x 302.12875pt>
+File: "UML 3".png Graphic file (type png)
+<use "UML 3".png>
+Package pdftex.def Info: "UML 3".png  used on input line 72.
+(pdftex.def)             Requested size: 390.0pt x 172.38113pt.
+ [4 <./UML 2.png> <./UML 3.png>] [5] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 3035 strings out of 492616
- 44107 string characters out of 6129480
+ 3052 strings out of 492616
+ 44354 string characters out of 6129480
  109337 words of memory out of 5000000
- 6933 multiletter control sequences out of 15000+600000
+ 6947 multiletter control sequences out of 15000+600000
  9414 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,32p,524b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb>
-Output written on Report.pdf (4 pages, 468247 bytes).
+ 41i,6n,32p,524b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Report.pdf (7 pages, 524381 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

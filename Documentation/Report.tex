@@ -13,7 +13,7 @@
 
 \begin{document}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Logo}
 \end{figure}
@@ -29,6 +29,13 @@
 \section{Task 1}
 
 \subsection{The Design}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{"UML 1"}
+    \caption{Task 1 UML Diagram}
+\end{figure}
+
 In this section a pure abstract class was created called 'ImmutableList' containing the required functions.  Another class was created called 'ImmutableLinkedList' which inherited from the first class. This was done to implement the methods of the abstract class for a structure called a linked list. The class has 2 constructors and 3 variables.
 
 \subsubsection{The constructors}
@@ -51,11 +58,21 @@ To test the immutability of a list, a list was created with some initial values.
 The list was also tested concurrently. A function was created that receives a list and a value to append. Two threads were created and the function was run in each thread with a different value passed. After the threads were joined, the list that was passed was printed to show that it was unchanged.
 
 \section{Task 2}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{"UML 2"}
+    \caption{Task 2 UML Diagram}
+\end{figure}
+
 \section{Task 3}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{"UML 3"}
+    \caption{Task 3 UML Diagram}
+\end{figure}
 \section{Appendix}
-
-% \lstinputlisting[language=c++, caption=caption, frame=single]{}
-
 
 
 \end{document}

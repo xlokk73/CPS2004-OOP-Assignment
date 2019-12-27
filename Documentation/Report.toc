@@ -1,12 +1,12 @@
 \contentsline {section}{\numberline {0.1}Task 1}{2}% 
 \contentsline {subsection}{\numberline {0.1.1}The Design}{2}% 
 \contentsline {subsubsection}{The constructors}{2}% 
-\contentsline {subsubsection}{isHead}{2}% 
-\contentsline {subsubsection}{value}{2}% 
-\contentsline {subsubsection}{nextPtr}{2}% 
-\contentsline {subsection}{\numberline {0.1.2}Testing}{2}% 
-\contentsline {subsubsection}{Initial testing}{2}% 
+\contentsline {subsubsection}{isHead}{3}% 
+\contentsline {subsubsection}{value}{3}% 
+\contentsline {subsubsection}{nextPtr}{3}% 
+\contentsline {subsection}{\numberline {0.1.2}Testing}{3}% 
+\contentsline {subsubsection}{Initial testing}{3}% 
 \contentsline {subsubsection}{Concurrent testing}{3}% 
-\contentsline {section}{\numberline {0.2}Task 2}{3}% 
-\contentsline {section}{\numberline {0.3}Task 3}{3}% 
-\contentsline {section}{\numberline {0.4}Appendix}{3}% 
+\contentsline {section}{\numberline {0.2}Task 2}{4}% 
+\contentsline {section}{\numberline {0.3}Task 3}{4}% 
+\contentsline {section}{\numberline {0.4}Appendix}{5}% 
