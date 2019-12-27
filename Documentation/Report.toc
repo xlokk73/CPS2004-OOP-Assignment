@@ -8,5 +8,9 @@
 \contentsline {subsubsection}{Initial testing}{3}% 
 \contentsline {subsubsection}{Concurrent testing}{3}% 
 \contentsline {section}{\numberline {0.2}Task 2}{4}% 
-\contentsline {section}{\numberline {0.3}Task 3}{4}% 
-\contentsline {section}{\numberline {0.4}Appendix}{5}% 
+\contentsline {subsubsection}{The Design}{4}% 
+\contentsline {subsubsection}{Testing}{4}% 
+\contentsline {subsubsection}{Limitations}{4}% 
+\contentsline {section}{\numberline {0.3}Task 3}{5}% 
+\contentsline {subsection}{\numberline {0.3.1}The Design}{5}% 
+\contentsline {subsection}{\numberline {0.3.2}Testing}{5}% 

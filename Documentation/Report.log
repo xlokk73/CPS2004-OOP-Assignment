@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  27 DEC 2019 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  27 DEC 2019 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -246,15 +246,30 @@ e printed as should.
 <"UML 2".png, id=22, 613.29124pt x 365.365pt>
 File: "UML 2".png Graphic file (type png)
 <use "UML 2".png>
-Package pdftex.def Info: "UML 2".png  used on input line 64.
+Package pdftex.def Info: "UML 2".png  used on input line 65.
 (pdftex.def)             Requested size: 390.0pt x 232.3387pt.
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
+\OT1/cmr/m/n/12 class 'User'. 
+ []
+
+
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 69--72
+\OT1/cmr/m/n/12 The match-ing en-gine sim-ply com-pares all sell or-ders with b
+uy or-ders, checks 
+ []
+
 <"UML 3".png, id=26, 683.55376pt x 302.12875pt>
 File: "UML 3".png Graphic file (type png)
 <use "UML 3".png>
-Package pdftex.def Info: "UML 3".png  used on input line 72.
+Package pdftex.def Info: "UML 3".png  used on input line 84.
 (pdftex.def)             Requested size: 390.0pt x 172.38113pt.
- [4 <./UML 2.png> <./UML 3.png>] [5] (./Report.aux) ) 
+[4 <./UML 2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+\OT1/cmr/m/n/12 were also over-loaded us-ing tem-plated func-tions. 
+ []
+
+[5 <./UML 3.png>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
  3052 strings out of 492616
  44354 string characters out of 6129480
@@ -263,11 +278,11 @@ Here is how much of TeX's memory you used:
  9414 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,32p,524b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Report.pdf (7 pages, 524381 bytes).
+</usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb>
+Output written on Report.pdf (7 pages, 526706 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream

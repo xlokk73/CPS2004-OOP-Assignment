@@ -59,11 +59,21 @@ The list was also tested concurrently. A function was created that receives a li
 
 \section{Task 2}
 
+\subsubsection{The Design}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{"UML 2"}
     \caption{Task 2 UML Diagram}
 \end{figure}
+
+For this task, three classes: Order, Security and User were created and each contained an ArrayList to keep track of all objects created. Due to the fact that in this design, buy orders and sell orders are identical except for their type (buy or sell), a String attribute 'type' was created and inheritance was not used. This was also the case for listers and traders in the class 'User'.
+\linebreak
+The matching engine simply compares all sell orders with buy orders, checks when the product matches, and if the amount of the buy is less than or equal to the amount of the sell, it completes the trade and adjust the required fields.
+
+\subsubsection{Testing}
+
+\subsubsection{Limitations}
+For a large amount of orders, it would have been better if they were stored in a separate ArrayLists, because as it is, the matching engine has to go through all orders twice. This is very inefficient as opposed to comparing the list of sell orders with the list of buy orders.
 
 \section{Task 3}
 
@@ -74,8 +84,13 @@ The list was also tested concurrently. A function was created that receives a li
     \includegraphics[width=1\textwidth]{"UML 3"}
     \caption{Task 3 UML Diagram}
 \end{figure}
-\section{Appendix}
 
-For this task, 
+For this task, a template class  'Expr' was created. The purpose of this was to represent the AST and unwind it as should. Template classes for the operators were also created which server a similar purpose. The operators were also overloaded using templated functions.
+\linebreak
+For the intergration function, a template function was created that received 'Expr' along with the other requirements as parameters. The function implemented the trapeziod rule.
+
+\subsection{Testing}
+
+For the testing, an expression that used all operators was used and the output was checked. As for the integration part, an expression was passed and checked against the correct answer.
 
 \end{document}
