@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/main.cpp" "/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/Task1/cmake-build-debug/CMakeFiles/Task1.dir/main.cpp.o"
+  "/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/task1/main.cpp" "/Users/manwelbugeja/School/oop-assignment/2020_CPS2004_Bugeja_Manwel_454000L_assignment_code/task1/cmake-build-debug/CMakeFiles/Task1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
