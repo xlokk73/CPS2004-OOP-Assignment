@@ -57,6 +57,16 @@ public class ListerTest {
         assertEquals(generatedString, Lister.getList().get(0).getName());
         assertEquals(generatedString1, Lister.getList().get(1).getName());
 
+        expected = true;
+        actual = Lister.exists(generatedString);
+        assertEquals(expected, actual);
+        actual = Lister.exists(generatedString1);
+        assertEquals(expected, actual);
+
+        expected = false;
+        actual = Lister.exists(generatedString2);
+        assertEquals(expected, actual);
+
         //adding wallet to a non-existing user
         expected = false;
         actual = Lister.increaseWallet(generatedString2, Generate.randomDouble(maxWallet, minWallet));

@@ -9,13 +9,40 @@ public class Security {
 
     /**
      *
-     * @param lister
-     * @param description
-     * @param price
-     * @param supply
-     * @return
+     * @param lister lister of the security
+     * @param description description of the security
+     * @param price price of the security
+     * @param supply supply of the security
+     * @return true if security is successfully added, false otherwise
      */
     public static boolean list(String lister, String description, double price, int supply){
+        if(!Lister.exists(lister)){
+            return false;
+        }
+        else if(price < 0){
+            return false;
+        }
+        else if(supply <= 0){
+            return false;
+        }
+
+        Security instance = new Security();
+        instance.lister = lister;
+        instance.description = description;
+        instance.price = price;
+        instance.supply = supply;
+
+        instances.add(instance);
         return true;
+    }
+
+    static boolean exists(String description){
+        for (Security instance : instances) {
+            if (instance.description.equals(description)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

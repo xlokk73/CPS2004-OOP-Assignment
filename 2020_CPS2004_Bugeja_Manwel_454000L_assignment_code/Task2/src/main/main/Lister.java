@@ -114,4 +114,14 @@ public class Lister extends User {
     static ArrayList<Lister> getList(){
         return instances;
     }
+
+    static boolean exists(String name){
+        for (Lister instance : instances) {
+            if (instance.name.equals(name)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

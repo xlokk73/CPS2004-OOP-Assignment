@@ -116,4 +116,14 @@ public class Trader extends User{
     static ArrayList<Trader> getList(){
         return instances;
     }
+
+    static boolean exists(String name){
+        for (Trader instance : instances) {
+            if (instance.name.equals(name)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

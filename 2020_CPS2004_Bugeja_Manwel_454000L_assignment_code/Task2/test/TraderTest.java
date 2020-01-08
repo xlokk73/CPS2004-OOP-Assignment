@@ -62,6 +62,16 @@ public class TraderTest {
         assertEquals(generatedString, Trader.getList().get(0).getName());
         assertEquals(generatedString1, Trader.getList().get(1).getName());
 
+        expected = true;
+        actual = Trader.exists(generatedString);
+        assertEquals(expected, actual);
+        actual = Trader.exists(generatedString1);
+        assertEquals(expected, actual);
+
+        expected = false;
+        actual = Trader.exists(generatedString2);
+        assertEquals(expected, actual);
+
         //adding wallet to a non-existing user
         expected = false;
         actual = Trader.increaseWallet(generatedString2, Generate.randomDouble(maxWallet, minWallet));
