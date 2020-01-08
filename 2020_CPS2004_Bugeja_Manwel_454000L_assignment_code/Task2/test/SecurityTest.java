@@ -1,3 +1,4 @@
+import com.sun.tools.attach.AgentInitializationException;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -9,7 +10,7 @@ public class SecurityTest {
 
     //testing listing a security with non-existing user
     @Test
-    public void SecurityTest0(){
+    public void SecurityTest1(){
         boolean expected = false;
         boolean actual = Security.list(Generate.randomString(10), Generate.randomString(10), Generate.randomDouble(1000000, 0), (int) Generate.randomDouble(1000000, 0));
         assertEquals(expected, actual);
@@ -17,7 +18,7 @@ public class SecurityTest {
 
     //testing creating a security with negative price
     @Test
-    public void SecurityTest1(){
+    public void SecurityTest2(){
         boolean expected = false;
         String lister = Generate.randomString(10);
         Lister.register(lister, Generate.randomDouble(1000000, 0));
@@ -28,7 +29,7 @@ public class SecurityTest {
 
     //testing creating a security with negative supply
     @Test
-    public void SecurityTest2(){
+    public void SecurityTest3(){
         boolean expected = false;
         String lister = Generate.randomString(10);
         Lister.register(lister, Generate.randomDouble(1000000, 0));
@@ -37,12 +38,15 @@ public class SecurityTest {
         assertEquals(expected, actual);
     }
 
-    //creating multiple securities by same user
+    //creating multiple different securities by multiple users
     @Test
-    public void SecurityTest3(){
+    public void SecurityTest4(){
         boolean expected = true;
         String lister = Generate.randomString(10);
         Lister.register(lister, Generate.randomDouble(1000000, 0));
+
+        String lister1 = Generate.randomString(10);
+        Lister.register(lister1, Generate.randomDouble(1000000, 0));
 
         String security = Generate.randomString(10);
         String security1 = Generate.randomString(100);
@@ -54,7 +58,7 @@ public class SecurityTest {
         actual = Security.list(lister, security1, Generate.randomDouble(1000000, 0), (int) Generate.randomDouble(1000000, 0));
         assertEquals(expected, actual);
 
-        actual = Security.list(lister, security2, Generate.randomDouble(1000000, 0), (int) Generate.randomDouble(1000000, 0));
+        actual = Security.list(lister1, security2, Generate.randomDouble(1000000, 0), (int) Generate.randomDouble(1000000, 0));
         assertEquals(expected, actual);
 
         actual = Security.exists(security);
@@ -67,5 +71,19 @@ public class SecurityTest {
         assertEquals(expected, actual);
     }
 
+    //creating same security from multiple users
+    @Test
+    public void SecurityTest5(){
+        boolean expected = false;
+        String lister = Generate.randomString(10);
+        String lister1 = Generate.randomString(10);
+
+        String description = Generate.randomString(10);
+
+        Security.list(lister, description, Generate.randomDouble(1000000, 0), (int) Generate.randomDouble(1000000, 0));
+        boolean actual = Security.list(lister1, description, Generate.randomDouble(1000000, 0), (int) Generate.randomDouble(1000000, 0));
+
+        assertEquals(expected, actual);
+    }
 
 }
