@@ -26,6 +26,8 @@ public class Security {
             return false;
         }
 
+
+        //add security to security list
         Security instance = new Security();
         instance.lister = lister;
         instance.description = description;
@@ -33,6 +35,10 @@ public class Security {
         instance.supply = supply;
 
         instances.add(instance);
+
+        //add sell order
+        //SellOrder.Book(lister, description, price, supply);
+
         return true;
     }
 

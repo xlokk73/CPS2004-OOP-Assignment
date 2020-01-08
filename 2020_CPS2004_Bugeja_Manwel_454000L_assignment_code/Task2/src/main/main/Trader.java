@@ -24,7 +24,7 @@ public class Trader extends User{
         //check if user exists
         ArrayList<Trader> traderInstances = new ArrayList<>(Trader.getList());
 
-        for (User traderInstance : traderInstances) {
+        for (Trader traderInstance : traderInstances) {
             if (traderInstance.getName().equals(name)) {
                 return false;
             }

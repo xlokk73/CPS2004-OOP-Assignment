@@ -28,6 +28,11 @@ public class Lister extends User {
             }
         }
 
+        //add as a trader
+        if(!Trader.register(name, wallet)){
+            return false;
+        }
+
         //check that wallet is greater or equal to 0
         if(wallet < 0){
             return false;
