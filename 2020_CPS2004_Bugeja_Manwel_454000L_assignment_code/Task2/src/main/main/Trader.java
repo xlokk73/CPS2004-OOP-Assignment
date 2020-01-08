@@ -22,7 +22,7 @@ public class Trader extends User{
     public static Boolean register(String name, double wallet){
 
         //check if user exists
-        ArrayList<User> traderInstances = new ArrayList<>(Trader.getList());
+        ArrayList<Trader> traderInstances = new ArrayList<>(Trader.getList());
 
         for (User traderInstance : traderInstances) {
             if (traderInstance.getName().equals(name)) {
