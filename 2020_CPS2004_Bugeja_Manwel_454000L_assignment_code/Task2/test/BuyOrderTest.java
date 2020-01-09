@@ -56,4 +56,27 @@ public class BuyOrderTest {
         actual = BuyOrder.exists(order, price, quantity);
         assertEquals(expected, actual);
     }
+
+    //testing cancel order
+    @Test
+    public void buyOrderTest3(){
+        String order = Generate.randomString(10);
+        double price = Generate.randomDouble(1000000, 10);
+        int quantity = (int) Generate.randomDouble(1000000, 10);
+        String trader = Generate.randomString(10);
+        double wallet = price * quantity;
+        Trader.register(trader, wallet);
+
+        assertTrue(BuyOrder.book(trader, order, price, quantity));
+
+        //deleting an order with mismatching trader
+        assertFalse(BuyOrder.cancel(Generate.randomString(9), order));
+
+        //deleting an order with mismatching order
+        assertFalse(BuyOrder.cancel(trader, Generate.randomString(9)));
+
+        //deleting an order successfully
+        assertTrue(BuyOrder.cancel(trader, order));
+        assertFalse(BuyOrder.exists(order, price, quantity));
+    }
 }
