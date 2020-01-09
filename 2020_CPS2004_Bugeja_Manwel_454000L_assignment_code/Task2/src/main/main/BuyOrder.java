@@ -15,7 +15,7 @@ public class BuyOrder extends Order {
             return false;
         }
 
-        SellOrder instance = new SellOrder();
+        BuyOrder instance = new BuyOrder();
         instance.trader = trader;
         instance.securityName = securityName;
         instance.price = price;
