@@ -1,7 +1,7 @@
 public class User {
-    String name;
-    double wallet;
-
+    protected String name;
+    protected double wallet;
+    
     Boolean cancelOrder(){
         return false;
     }

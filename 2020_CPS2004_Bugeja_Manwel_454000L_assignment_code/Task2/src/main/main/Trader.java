@@ -3,7 +3,12 @@ import javafx.beans.binding.BooleanExpression;
 import java.util.ArrayList;
 
 public class Trader extends User{
+    private static class OwnedProduct {
+        String securityName;
+        int amount;
+    }
     private static ArrayList<Trader> instances = new ArrayList<>();
+    private static ArrayList<OwnedProduct> OwnedProducts = new ArrayList<>();
 
     /**
      *
@@ -24,7 +29,7 @@ public class Trader extends User{
         //check if user exists
         ArrayList<Trader> traderInstances = new ArrayList<>(Trader.getList());
 
-        for (Trader traderInstance : traderInstances) {
+        for (User traderInstance : traderInstances) {
             if (traderInstance.getName().equals(name)) {
                 return false;
             }
@@ -125,5 +130,14 @@ public class Trader extends User{
         }
 
         return false;
+    }
+
+
+    public static boolean addOwnedProduct(String trader, String securityName, int amount){
+        return true;
+    }
+
+    public static boolean removeOwnedProduct(String trader, String securityName, int amount){
+        return true;
     }
 }

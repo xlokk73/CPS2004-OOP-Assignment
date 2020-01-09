@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Order {
-    private String trader;
-    private String securityName;
-    private int quantity;
-    private double price;
-    private String timestamp;
+    protected String trader;
+    protected String securityName;
+    protected double price;
+    protected int quantity;
+    protected String timestamp;
 }
