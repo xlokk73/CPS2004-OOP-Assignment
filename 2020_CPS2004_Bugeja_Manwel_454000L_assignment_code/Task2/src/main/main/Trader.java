@@ -2,13 +2,28 @@ import javafx.beans.binding.BooleanExpression;
 
 import java.util.ArrayList;
 
-public class Trader extends User{
-    private static class OwnedProduct {
-        String securityName;
-        int amount;
+class OwnedProduct {
+    private String securityName;
+    private int amount;
+
+    public String getSecurityName(){
+        return securityName;
     }
+
+    public int getAmount(){
+        return amount;
+    }
+
+    OwnedProduct(String securityName, int amount){
+        this.securityName = securityName;
+        this.amount = amount;
+    }
+}
+
+public class Trader extends User{
+
     private static ArrayList<Trader> instances = new ArrayList<>();
-    private static ArrayList<OwnedProduct> OwnedProducts = new ArrayList<>();
+    private ArrayList<OwnedProduct> OwnedProducts = new ArrayList<>();
 
     /**
      *
@@ -132,8 +147,50 @@ public class Trader extends User{
         return false;
     }
 
+    public static ArrayList<OwnedProduct> getOwnedProducts(String name) throws NonExistingException{
+        for (Trader instance : instances) {
+            if (instance.getName().equals(name)) {
+                return instance.OwnedProducts;
+            }
+        }
 
-    public static boolean addOwnedProduct(String trader, String securityName, int amount){
+        throw new NonExistingException("trader");
+    }
+
+    public static boolean owns(String name, String securityName, int amount) throws NonExistingException {
+        ArrayList<OwnedProduct> OwnedProducts = Trader.getOwnedProducts(name);
+
+        //check that user exists and has the right amount
+        for (OwnedProduct ownedProduct : OwnedProducts) {
+            if (ownedProduct.getSecurityName().equals(securityName)
+                    && ownedProduct.getAmount() >= amount) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static boolean addOwnedProduct(String name, String securityName, int amount){
+        if(!Trader.exists(name)){
+            return false;
+        }
+        try{
+            if(Security.getSupply(securityName) < amount){
+                return false;
+            }
+        }
+        catch(NonExistingException e){
+            return false;
+        }
+
+        OwnedProduct instance = new OwnedProduct(securityName, amount);
+        for (Trader trader : instances) {
+            if (trader.getName().equals(name)) {
+                trader.OwnedProducts.add(instance);
+            }
+        }
+
         return true;
     }
 

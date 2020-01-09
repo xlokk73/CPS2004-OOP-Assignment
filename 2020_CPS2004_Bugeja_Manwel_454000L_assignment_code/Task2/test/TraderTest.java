@@ -4,15 +4,15 @@ import org.junit.Test;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+
 public class TraderTest {
 
 
 
     //tests creating a new user successfully
     @Test
-    public void TraderTest0(){
+    public void TraderTest1(){
 
 
         double maxWallet = 100000000;
@@ -122,5 +122,89 @@ public class TraderTest {
             fail();
         }
         assertEquals(returnedWallet, wallet1 - walletDecrease, 0.001);
+
+        //check that no listers have been created with trader creation
+        int expectedSize = 0;
+        int actualSize = Lister.getList().size();
+        assertEquals(expectedSize, actualSize);
+    }
+
+    //testing addOwnedProduct
+    @Test
+    public void TraderTest2(){
+        String lister = Generate.randomString(10);
+        String trader = Generate.randomString(8);
+        double wallet = Generate.randomDouble(1000000, 0);
+        String security = Generate.randomString(10);
+        int supply = (int) Generate.randomDouble(1000000, 0);
+
+
+        Trader.register(trader, wallet);
+        Lister.register(lister, wallet);
+        Security.list(lister, security, Generate.randomDouble(1000000, 0), supply);
+
+        //adding an OwnedProduct with non-existing user
+        boolean expected = false;
+        boolean actual = Trader.addOwnedProduct(Generate.randomString(9), security, supply);
+
+        assertEquals(expected, actual);
+
+
+        //adding an OwnedProduct with non-existing security
+        expected = false;
+        actual = Trader.addOwnedProduct(trader, Generate.randomString(9), supply);
+        assertEquals(expected, actual);
+
+        //adding an Owned Product with amount larger than supply
+        expected = false;
+        actual = Trader.addOwnedProduct(trader, security, supply + (int) Generate.randomDouble(10,1));
+        assertEquals(expected, actual);
+
+        //successfully adding an owned product
+        expected = true;
+        actual = Trader.addOwnedProduct(trader, security, supply);
+        assertEquals(expected, actual);
+
+        //checking that product was successfully added
+        expected = true;
+        actual = false;
+        try {
+            actual = Trader.owns(trader, security, supply);
+        }
+        catch(NonExistingException e){
+            fail();
+        }
+        assertEquals(expected, actual);
+
+        //checking owns function with a product that doesn't exist
+        expected = false;
+        actual = true;
+        try{
+            actual = Trader.owns(trader, Generate.randomString(9), supply);
+        }
+        catch(NonExistingException e){
+            fail();
+        }
+        assertEquals(expected, actual);
+
+        //checking owns function with trader that doesn't exist
+        try{
+            Trader.owns(Generate.randomString(10), security, supply);
+            fail();
+        }
+        catch(NonExistingException e){
+            assertTrue(true);
+        }
+
+        //checking owns function with supply greater that owner has
+        expected = false;
+        try {
+            actual = Trader.owns(trader, security, supply + (int) Generate.randomDouble(10, 1));
+        }
+        catch (NonExistingException e){
+            fail();
+        }
+        assertEquals(expected, actual);
+
     }
 }

@@ -1,7 +1,8 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import java.util.ArrayList;
+
+import static org.junit.Assert.*;
 
 public class ListerTest {
 
@@ -117,10 +118,16 @@ public class ListerTest {
             fail();
         }
         assertEquals(returnedWallet, wallet1 - walletDecrease, 0.001);
-    }
 
-    @Test
-    public void ListerTest1(){
+        //check that for every lister, a trader has been created
+        ArrayList<Trader> traderInstances = Trader.getList();
+        ArrayList<Lister> listerInstances = Lister.getList();
+        int listerListSize = Lister.getList().size();
+        int traderListSize = Trader.getList().size();
 
+        assertEquals(listerListSize, traderListSize);
+        for(int i = 0; i < listerListSize; ++i){
+            assertEquals(listerInstances.get(i).getName(), traderInstances.get(i).getName());
+        }
     }
 }

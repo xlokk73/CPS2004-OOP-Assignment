@@ -51,4 +51,14 @@ public class Security {
 
         return false;
     }
+
+    static int getSupply(String description) throws NonExistingException{
+        for (Security instance : instances) {
+            if (instance.description.equals(description)) {
+                return instance.supply;
+            }
+        }
+
+        throw new NonExistingException("security");
+    }
 }
