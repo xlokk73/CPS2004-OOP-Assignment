@@ -33,7 +33,23 @@ public class BuyOrder extends Order {
             }
         }
 
+        return false;
+    }
+
+    static ArrayList<BuyOrder> getList(){
+        return instances;
+    }
+
+    static boolean cancel(String trader, String securityName){
+        for(int i = 0; i < instances.size(); ++i){
+            if(instances.get(i).securityName.equals(securityName)
+                && instances.get(i).trader.equals(trader)){
+                instances.remove(i);
+                return true;
+            }
+        }
 
         return false;
     }
+
 }
