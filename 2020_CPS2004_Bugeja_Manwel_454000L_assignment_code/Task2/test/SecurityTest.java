@@ -128,6 +128,11 @@ public class SecurityTest {
         boolean expected = true;
         boolean actual = Security.list(lister, description, price, supply);
         assertEquals(expected, actual);
+
+        ArrayList<SellOrder> sellOrderInstances = SellOrder.getList();
+        assertEquals(description, sellOrderInstances.get(0).securityName);
+        assertEquals(price, sellOrderInstances.get(0).price, 0.001);
+        assertEquals(supply, sellOrderInstances.get(0).quantity);
     }
 
 

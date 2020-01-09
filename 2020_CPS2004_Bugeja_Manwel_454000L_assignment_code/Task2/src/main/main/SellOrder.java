@@ -19,6 +19,11 @@ public class SellOrder extends Order{
         instance.securityName = securityName;
         instance.price = price;
         instance.quantity = quantity;
+        instances.add(instance);
         return true;
+    }
+
+    static ArrayList<SellOrder> getList(){
+        return instances;
     }
 }
