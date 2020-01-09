@@ -3,13 +3,6 @@ import java.util.ArrayList;
 public class Lister extends User {
     private static ArrayList<Lister> instances = new ArrayList<>();
 
-    /**
-     *
-     * @return true if the booking was successful
-     */
-    Boolean Book(){
-        return false;
-    }
 
     /**
      *
@@ -120,6 +113,11 @@ public class Lister extends User {
         return instances;
     }
 
+    /**
+     *
+     * @param name name of a lister
+     * @return true if the lister is registered
+     */
     static boolean exists(String name){
         for (Lister instance : instances) {
             if (instance.name.equals(name)) {

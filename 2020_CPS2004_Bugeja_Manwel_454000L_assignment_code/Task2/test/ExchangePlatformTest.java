@@ -30,7 +30,7 @@ public class ExchangePlatformTest {
         ExchangePlatform.match();
 
         try{
-            assertTrue(Trader.owns("Manwel", "building", 5));
+            assertFalse(Trader.owns("Manwel", "building", 5));
         }
         catch(NonExistingException e){
             fail();

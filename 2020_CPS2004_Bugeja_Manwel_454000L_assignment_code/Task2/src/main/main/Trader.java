@@ -25,13 +25,6 @@ public class Trader extends User{
     private static ArrayList<Trader> instances = new ArrayList<>();
     private ArrayList<OwnedProduct> OwnedProducts = new ArrayList<>();
 
-    /**
-     *
-     * @return true if the booking was successful
-     */
-    Boolean Book(){
-        return false;
-    }
 
     /**
      *
@@ -63,6 +56,12 @@ public class Trader extends User{
         return true;
     }
 
+    /**
+     *
+     * @param name name of the trader to be returned
+     * @return the trader whise name is given
+     * @throws NonExistingException if trader does not exist
+     */
     private static Trader getTrader(String name) throws NonExistingException{
         for (Trader instance : instances) {
             if (instance.name.equals(name)) {
@@ -137,6 +136,11 @@ public class Trader extends User{
         return instances;
     }
 
+    /**
+     *
+     * @param name the name of a trader
+     * @return true if a trader exists with the given name
+     */
     static boolean exists(String name){
         for (Trader instance : instances) {
             if (instance.name.equals(name)) {
@@ -147,6 +151,12 @@ public class Trader extends User{
         return false;
     }
 
+    /**
+     *
+     * @param name name of a trader
+     * @return the list of owned products by the trader
+     * @throws NonExistingException if trader does not exist
+     */
     public static ArrayList<OwnedProduct> getOwnedProducts(String name) throws NonExistingException{
         for (Trader instance : instances) {
             if (instance.getName().equals(name)) {
@@ -157,6 +167,14 @@ public class Trader extends User{
         throw new NonExistingException("trader");
     }
 
+    /**
+     *
+     * @param name name of a trader
+     * @param securityName description of a security
+     * @param amount amount of a security
+     * @return true if the trader owns the security wuth the given amount
+     * @throws NonExistingException if trader does not exist
+     */
     public static boolean owns(String name, String securityName, int amount) throws NonExistingException {
         ArrayList<OwnedProduct> OwnedProducts = Trader.getOwnedProducts(name);
 
@@ -171,12 +189,19 @@ public class Trader extends User{
         return false;
     }
 
+    /**
+     *
+     * @param name name of a trader
+     * @param securityName description of a security
+     * @param amount amount of product
+     * @return true if the given product was successfully added to the list of owned products
+     */
     public static boolean addOwnedProduct(String name, String securityName, int amount){
         if(!Trader.exists(name)){
             return false;
         }
         try{
-            if(Security.getSupply(securityName) < amount){
+            if(Security.getSupply(securityName) != amount){
                 return false;
             }
         }
@@ -194,7 +219,37 @@ public class Trader extends User{
         return true;
     }
 
-    public static boolean removeOwnedProduct(String trader, String securityName, int amount){
-        return true;
+    /**
+     *
+     * @param name name of a trader
+     * @param securityName description of a security
+     * @param amount amount of a security
+     * @return true if the given amount of product was successfully removed
+     */
+    public static boolean removeOwnedProduct(String name, String securityName, int amount){
+        if(!Trader.exists(name)){
+            return false;
+        }
+        try{
+            if(Security.getSupply(securityName) != amount){
+                return false;
+            }
+        }
+        catch(NonExistingException e){
+            return false;
+        }
+
+        for (Trader instance : instances) {
+            if (instance.getName().equals(name)) {
+                for (int j = 0; j < instance.OwnedProducts.size(); ++j) {
+                    if (instance.OwnedProducts.get(j).getSecurityName().equals(securityName)) {
+                        instance.OwnedProducts.remove(j);
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 }
