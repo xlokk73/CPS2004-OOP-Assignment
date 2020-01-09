@@ -36,8 +36,10 @@ public class Security {
 
         instances.add(instance);
 
+        //add product to owned products
+        Trader.addOwnedProduct(lister, description, supply);
         //add sell order
-        //SellOrder.Book(lister, description, price, supply);
+        SellOrder.book(lister, description, price, supply);
 
         return true;
     }

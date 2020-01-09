@@ -1,6 +1,9 @@
 import com.sun.tools.attach.AgentInitializationException;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.*;
 
 
 public class SecurityTest {
@@ -85,5 +88,47 @@ public class SecurityTest {
 
         assertEquals(expected, actual);
     }
+
+    //check that product is added to owned products of the trader
+    @Test
+    public void SecurityTest6(){
+        String lister = Generate.randomString(10);
+        double wallet = Generate.randomDouble(1000000, 0);
+        double price = Generate.randomDouble(1000000, 0);
+        int supply = (int) Generate.randomDouble(1000000, 0);
+        Lister.register(lister, wallet);
+        String description = Generate.randomString(10);
+
+        boolean expected = true;
+        boolean actual = Security.list(lister, description, price, supply);
+        assertEquals(expected, actual);
+
+        expected = true;
+        actual = false;
+        try {
+            actual = Trader.owns(lister, description, supply);
+        }
+        catch(NonExistingException e){
+            fail();
+        }
+
+        assertEquals(expected, actual);
+    }
+
+    //check if sell order has been created when a security is listed
+    @Test
+    public void securityTest7(){
+        String lister = Generate.randomString(10);
+        double wallet = Generate.randomDouble(1000000, 0);
+        double price = Generate.randomDouble(1000000, 0);
+        int supply = (int) Generate.randomDouble(1000000, 0);
+        Lister.register(lister, wallet);
+        String description = Generate.randomString(10);
+
+        boolean expected = true;
+        boolean actual = Security.list(lister, description, price, supply);
+        assertEquals(expected, actual);
+    }
+
 
 }
