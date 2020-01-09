@@ -206,5 +206,14 @@ public class TraderTest {
         }
         assertEquals(expected, actual);
 
+
+        assertTrue(Trader.removeOwnedProduct(trader, security, supply));
+        try{
+            assertFalse(Trader.owns(trader, security, supply));
+        }
+        catch(NonExistingException e){
+            fail();
+        }
     }
+
 }

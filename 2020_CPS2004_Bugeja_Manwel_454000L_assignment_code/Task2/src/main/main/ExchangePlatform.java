@@ -12,19 +12,19 @@ public class ExchangePlatform {
         double price;
         int quantity;
 
-        for (SellOrder sellOrderInstance : sellOrderInstances) {
+        for(int i = 0; i < sellOrderInstances.size(); ++i){
 
-            for (BuyOrder buyOrderInstance : buyOrderInstances) {
+            for(int j = 0; j < buyOrderInstances.size(); ++j) {
                 //if it matches a buy order
-                if (sellOrderInstance.securityName.equals(buyOrderInstance.securityName)
-                        && sellOrderInstance.quantity == buyOrderInstance.quantity
-                        && sellOrderInstance.price == buyOrderInstance.price) {
+                if (sellOrderInstances.get(i).securityName.equals(buyOrderInstances.get(j).securityName)
+                        && sellOrderInstances.get(i).quantity == buyOrderInstances.get(j).quantity
+                        && sellOrderInstances.get(i).price == buyOrderInstances.get(j).price) {
 
-                    seller = sellOrderInstance.trader;
-                    buyer = buyOrderInstance.trader;
-                    security = sellOrderInstance.securityName;
-                    price = sellOrderInstance.price;
-                    quantity = sellOrderInstance.quantity;
+                    seller = sellOrderInstances.get(i).trader;
+                    buyer = buyOrderInstances.get(j).trader;
+                    security = sellOrderInstances.get(i).securityName;
+                    price = sellOrderInstances.get(i).price;
+                    quantity = sellOrderInstances.get(i).quantity;
 
                     //remove money from buyer
                     Trader.decreaseWallet(buyer, price * quantity);
