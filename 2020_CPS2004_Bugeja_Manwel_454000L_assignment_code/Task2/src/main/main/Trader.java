@@ -1,5 +1,3 @@
-import javafx.beans.binding.BooleanExpression;
-
 import java.util.ArrayList;
 
 class OwnedProduct {

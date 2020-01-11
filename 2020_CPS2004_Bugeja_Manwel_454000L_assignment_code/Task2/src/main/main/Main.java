@@ -12,7 +12,5 @@ public class Main {
             System.out.println("Lister does not exist");
         }
 
-        BuyOrderTest.buyOrderTest1();
-
     }
 }
