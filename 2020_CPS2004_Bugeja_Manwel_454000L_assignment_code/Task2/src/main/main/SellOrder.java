@@ -27,6 +27,7 @@ public class SellOrder extends Order{
         instance.securityName = securityName;
         instance.price = price;
         instance.quantity = quantity;
+        instance.timestamp = System.currentTimeMillis();
         instances.add(instance);
         return true;
     }

@@ -5,5 +5,5 @@ public class Order {
     protected String securityName;
     protected double price;
     protected int quantity;
-    protected String timestamp;
+    protected long timestamp;
 }
