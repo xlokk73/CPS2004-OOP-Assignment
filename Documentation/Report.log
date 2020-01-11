@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  27 DEC 2019 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  11 JAN 2020 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -243,50 +243,48 @@ Overfull \hbox (1.4626pt too wide) in paragraph at lines 55--56
 e printed as should.  
  []
 
-<"UML 2".png, id=22, 613.29124pt x 365.365pt>
+<"UML 2".png, id=22, 1937.2375pt x 3386.6525pt>
 File: "UML 2".png Graphic file (type png)
 <use "UML 2".png>
 Package pdftex.def Info: "UML 2".png  used on input line 65.
-(pdftex.def)             Requested size: 390.0pt x 232.3387pt.
+(pdftex.def)             Requested size: 390.0pt x 681.76266pt.
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
-\OT1/cmr/m/n/12 class 'User'. 
+Overfull \vbox (180.02931pt too high) has occurred while \output is active []
+
+
+[4 <./UML 2.png (PNG copy)>]
+Overfull \hbox (2.63344pt too wide) in paragraph at lines 73--74
+\OT1/cmr/m/n/12 For the test-ing, JU-nit was used and new meth-ods were added a
+s the project 
  []
 
-
-Overfull \hbox (4.01257pt too wide) in paragraph at lines 69--72
-\OT1/cmr/m/n/12 The match-ing en-gine sim-ply com-pares all sell or-ders with b
-uy or-ders, checks 
- []
-
-(./Task 2 sample output.txt [4 <./UML 2.png>] [5] [6] [7] [8])
-<"UML 3".png, id=43, 683.55376pt x 302.12875pt>
+<"UML 3".png, id=29, 683.55376pt x 302.12875pt>
 File: "UML 3".png Graphic file (type png)
 <use "UML 3".png>
-Package pdftex.def Info: "UML 3".png  used on input line 89.
+Package pdftex.def Info: "UML 3".png  used on input line 87.
 (pdftex.def)             Requested size: 390.0pt x 172.38113pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--96
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 \OT1/cmr/m/n/12 were also over-loaded us-ing tem-plated func-tions. 
  []
 
-[9 <./UML 3.png>] [10] (./Report.aux) ) 
+[6 <./UML 3.png>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 3312 strings out of 492616
- 46350 string characters out of 6129480
- 166337 words of memory out of 5000000
- 7203 multiletter control sequences out of 15000+600000
+ 3052 strings out of 492616
+ 44354 string characters out of 6129480
+ 109337 words of memory out of 5000000
+ 6947 multiletter control sequences out of 15000+600000
  9414 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,32p,524b,1612s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb>
-Output written on Report.pdf (12 pages, 536228 bytes).
+ 41i,6n,32p,524b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb>
+Output written on Report.pdf (8 pages, 874811 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

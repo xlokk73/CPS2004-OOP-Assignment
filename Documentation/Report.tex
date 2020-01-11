@@ -66,19 +66,17 @@ The list was also tested concurrently. A function was created that receives a li
     \caption{Task 2 UML Diagram}
 \end{figure}
 
-For this task, three classes: Order, Security and User were created and each contained an ArrayList to keep track of all objects created. Due to the fact that in this design, buy orders and sell orders are identical except for their type (buy or sell), a String attribute 'type' was created and inheritance was not used. This was also the case for listers and traders in the class 'User'.
-\linebreak
-The matching engine simply compares all sell orders with buy orders, checks when the product matches, and if the amount of the buy is less than or equal to the amount of the sell, it completes the trade and adjust the required fields.
+In my design for this task, three main classes were created for securities, orders and users. For the latter two, two further sub classes where created. These three main classes work in a very similar manner. Created instances are tracked by being added to a static array list and having a unique variable to identify them. Operations on these classes work by iterating through the created instances until the correct one is found.
+
 
 \subsection{Testing}
-
-\lstinputlisting[caption=Task 2 sample output, frame=single]{"Task 2 sample output.txt"}
+For the testing, JUnit was used and new methods were added as the project was developed. The tests tried the functions with invalid and valid parameters.
 
 \subsection{Limitations}
-For a large amount of orders, it would have been better if they were stored in a separate ArrayLists, because as it is, the matching engine has to go through all orders twice. This is very inefficient as opposed to comparing the list of sell orders with the list of buy orders.
+My solution 
 
 \subsection{Polymorphism}
-To implement the log, a class can be created with a new list structure with only an add method (and no remove). Every time 'book()' or 'list()' or 'removeOrder()' is called, the action is added to this new list. Tampering this list can be avoided with proper encapsulation.
+To implement the log, a class can be created with a new list structure with only an add method (and no remove). Every time 'book()' or 'list()' or 'cancel()' is called, the action is added to this new list. Tampering this list can be avoided with proper encapsulation.
 
 \section{Task 3}
 

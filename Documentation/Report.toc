@@ -9,9 +9,9 @@
 \contentsline {subsubsection}{Concurrent testing}{3}% 
 \contentsline {section}{\numberline {0.2}Task 2}{4}% 
 \contentsline {subsection}{\numberline {0.2.1}The Design}{4}% 
-\contentsline {subsection}{\numberline {0.2.2}Testing}{4}% 
-\contentsline {subsection}{\numberline {0.2.3}Limitations}{9}% 
-\contentsline {subsection}{\numberline {0.2.4}Polymorphism}{9}% 
-\contentsline {section}{\numberline {0.3}Task 3}{9}% 
-\contentsline {subsection}{\numberline {0.3.1}The Design}{9}% 
-\contentsline {subsection}{\numberline {0.3.2}Testing}{10}% 
+\contentsline {subsection}{\numberline {0.2.2}Testing}{5}% 
+\contentsline {subsection}{\numberline {0.2.3}Limitations}{5}% 
+\contentsline {subsection}{\numberline {0.2.4}Polymorphism}{5}% 
+\contentsline {section}{\numberline {0.3}Task 3}{6}% 
+\contentsline {subsection}{\numberline {0.3.1}The Design}{6}% 
+\contentsline {subsection}{\numberline {0.3.2}Testing}{6}% 
