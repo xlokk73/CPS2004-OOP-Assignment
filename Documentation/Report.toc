@@ -1,18 +1,19 @@
 \contentsline {section}{\numberline {0.1}Task 1}{2}% 
 \contentsline {subsection}{\numberline {0.1.1}The Design}{2}% 
 \contentsline {subsubsection}{The constructors}{2}% 
-\contentsline {subsubsection}{isHead}{3}% 
-\contentsline {subsubsection}{value}{3}% 
-\contentsline {subsubsection}{nextPtr}{3}% 
+\contentsline {subsubsection}{'isHead'}{3}% 
+\contentsline {subsubsection}{'value'}{3}% 
+\contentsline {subsubsection}{'nextPtr'}{3}% 
 \contentsline {subsection}{\numberline {0.1.2}Critical evaluation and limitations}{3}% 
 \contentsline {subsubsection}{Initial testing}{3}% 
 \contentsline {subsubsection}{Concurrent testing}{3}% 
-\contentsline {section}{\numberline {0.2}Task 2}{4}% 
-\contentsline {subsection}{\numberline {0.2.1}The Design}{4}% 
-\contentsline {subsection}{\numberline {0.2.2}Testing}{5}% 
-\contentsline {subsection}{\numberline {0.2.3}Critical evaluation and limitations}{5}% 
-\contentsline {subsection}{\numberline {0.2.4}Polymorphism}{5}% 
-\contentsline {section}{\numberline {0.3}Task 3}{6}% 
-\contentsline {subsection}{\numberline {0.3.1}The Design}{6}% 
-\contentsline {subsection}{\numberline {0.3.2}Testing}{6}% 
-\contentsline {subsection}{\numberline {0.3.3}Critical evaluation and limitations}{6}% 
+\contentsline {subsubsection}{Limitations}{3}% 
+\contentsline {section}{\numberline {0.2}Task 2}{5}% 
+\contentsline {subsection}{\numberline {0.2.1}The Design}{5}% 
+\contentsline {subsection}{\numberline {0.2.2}Testing}{6}% 
+\contentsline {subsection}{\numberline {0.2.3}Critical evaluation and limitations}{6}% 
+\contentsline {subsection}{\numberline {0.2.4}Polymorphism}{6}% 
+\contentsline {section}{\numberline {0.3}Task 3}{7}% 
+\contentsline {subsection}{\numberline {0.3.1}The Design}{7}% 
+\contentsline {subsection}{\numberline {0.3.2}Testing}{8}% 
+\contentsline {subsection}{\numberline {0.3.3}Critical evaluation and limitations}{8}% 

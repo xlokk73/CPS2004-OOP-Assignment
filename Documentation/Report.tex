@@ -39,15 +39,15 @@
 In this section a pure abstract class was created called 'ImmutableList' containing the required functions.  Another class was created called 'ImmutableLinkedList' which inherited from the first class. This was done to implement the methods of the abstract class for a structure called a linked list. The class has 2 constructors and 3 variables.
 
 \subsubsection{The constructors}
-The key to this design is the fact that there are actually two constructors but one of them is inaccessible by the user. The hidden constructor has the ability to create nodes with custom values for the variables isHead, value and nextPtr whose use is explained later. On the other hand the public constructor is only able to set the value of a head node. The public constructor is implementer using the private, passing isHead as true and nextPtr as nullptr and the value containing what is passed by the user.
+The key to this design is the fact that there are actually two constructors but one of them is inaccessible by the user. The hidden constructor has the ability to create nodes with custom values for the variables 'isHead', 'value' and 'nextPtr' whose use is explained later. On the other hand the public constructor is only able to set the value of a head node. The public constructor is implementer using the private, passing 'isHead' as true and 'nextPtr' as nullptr and the value containing what is passed by the user.
 
-\subsubsection{isHead}
-This variable is a boolean type which indicates if the current node is the head of a list or not. This is needed to distinguish the head from other nodes of the list.  isHead enables the possibility to have an empty list as the value head node is completely ignored by the api.
+\subsubsection{'isHead'}
+This variable is a boolean type which indicates if the current node is the head of a list or not. This is needed to distinguish the head from other nodes of the list.  'isHead' enables the possibility to have an empty list as the value head node is completely ignored by the api.
 
-\subsubsection{value}
+\subsubsection{'value'}
 This variable contains the value of the node which is the same type as that indicated at the creation of the immutable list.
 
-\subsubsection{nextPtr}
+\subsubsection{'nextPtr'}
 This variable contains a pointer towards the next node of the immutable list.
 
 \subsection{Critical evaluation and limitations}
@@ -56,6 +56,11 @@ To test the immutability of a list, a list was created with some initial values.
 
 \subsubsection{Concurrent testing}
 The list was also tested concurrently. A function was created that receives a list and a value to append. Two threads were created and the function was run in each thread with a different value passed. After the threads were joined, the list that was passed was printed to show that it was unchanged.
+
+\subsubsection{Limitations}
+To use this immutable list, the user would have to take care of the memory management manually. This could have been avoided by using smart pointers.
+\linebreak
+This design can also be inefficient when compared to its mutable counterpart. An example of this is when adding a new member to the list. A simple task requires for a creation of a whole new list which takes O(n). On top of that, accessing the memory for every element makes the process even slower. Improvements to my immutable list to improve its preformance could be done by making the linked list doubly linked.
 
 \section{Task 2}
 
@@ -91,7 +96,22 @@ Apart from that, the matching engine could have been tested more rigorously by t
 \end{figure}
 
 For this task, a template class  'Expr' was created. The purpose of this was to represent the AST and unwind it as should. Template classes for the operators were also created which server a similar purpose. The operators were also overloaded using templated functions.
-\linebreak
+
+The expression in the main is worked out as shown.
+
+\begin{lstlisting}[frame = single, caption = Example of an expression]
+((C(10) / X()) + (C(2) * X())).eval(4)
+
+=
+( (C(10) / X()).eval(4) ) + ( (C(2) * X()).eval(4))
+
+=
+( C(10).eval(4) / (X).eval(4) ) + ( C(2).eval(4) * X().eval(4) )
+
+=
+(10 / 4) + (2 * 4)
+\end{lstlisting}
+
 For the intergration function, a template function was created that received 'Expr' along with the other requirements as parameters. The function implemented the trapeziod rule.
 
 \subsection{Testing}
@@ -99,5 +119,6 @@ For the intergration function, a template function was created that received 'Ex
 For the testing, an expression that used all operators was used and the output was checked. As for the integration part, an expression was passed and checked against the correct answer.
 
 \subsection{Critical evaluation and limitations}
+It is difficult to know whether the inlined functions were done as should. Also, since the expression is evaluated in a kind of recursive manner (with the classes X  and  C being the base cases) the code generated could be very cumbersome especially for very long expressions.
 
 \end{document}
