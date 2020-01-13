@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  13 JAN 2020 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  13 JAN 2020 19:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,11 +336,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--92
 \OT1/cmr/m/n/12 can be avoided with proper en-cap-su-la-tion. 
  []
 
-<"UML 3".png, id=33, 683.55376pt x 302.12875pt>
+<"UML 3".png, id=33, 553.06625pt x 452.69125pt>
 File: "UML 3".png Graphic file (type png)
 <use "UML 3".png>
 Package pdftex.def Info: "UML 3".png  used on input line 99.
-(pdftex.def)             Requested size: 390.0pt x 172.38113pt.
+(pdftex.def)             Requested size: 390.0pt x 319.21645pt.
 [6]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
 
@@ -385,17 +385,17 @@ Package pdftex.def Info: "Plagerism Form".pdf , page1 used on input line 129.
 Here is how much of TeX's memory you used:
  4642 strings out of 492616
  65872 string characters out of 6129480
- 172514 words of memory out of 5000000
+ 154514 words of memory out of 5000000
  8495 multiletter control sequences out of 15000+600000
  9414 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,18n,43p,534b,1266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,18n,43p,534b,1589s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (11 pages, 1235130 bytes).
+Output written on Report.pdf (11 pages, 1237594 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
