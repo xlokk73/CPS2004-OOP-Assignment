@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  12 JAN 2020 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.20)  13 JAN 2020 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -119,50 +119,108 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box29
 \@float@everytoks=\toks18
 \@floatcapt=\box30
-) (./Report.aux)
-\openout1 = `Report.aux'.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count99
+\calc@Bcount=\count100
+\calc@Adimen=\dimen110
+\calc@Bdimen=\dimen111
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count101
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 
-(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count99
-\scratchdimen=\dimen110
-\scratchbox=\box31
-\nofMPsegments=\count100
-\nofMParguments=\count101
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count102
-\MPscratchDim=\dimen111
-\MPnumerator=\count103
-\makeMPintoPDFobject=\count104
-\everyMPtoPDFconversion=\toks20
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen112
+\AM@pageheight=\dimen113
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box31
+\AM@global@opts=\toks19
+\AM@toc@title=\toks20
+\c@AM@survey=\count102
+\AM@templatesizebox=\box32
+)
+(./Report.aux)
+\openout1 = `Report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen114
+\scratchbox=\box33
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen115
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
+))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -178,10 +236,6 @@ Package ifluatex Info: LuaTeX not detected.
 ))))
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -199,25 +253,39 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count105
-Package ragged2e Info: ABD: executing \RaggedRight on input line 14.
+\c@lstlisting=\count109
+Package ragged2e Info: ABD: executing \RaggedRight on input line 16.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 14.
+LaTeX Info: Redefining \selectfont on input line 16.
+\AtBeginShipoutBox=\box34
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
 <Logo.jpg, id=1, 1020.6933pt x 352.1958pt>
 File: Logo.jpg Graphic file (type jpg)
 <use Logo.jpg>
-Package pdftex.def Info: Logo.jpg  used on input line 18.
+Package pdftex.def Info: Logo.jpg  used on input line 20.
 (pdftex.def)             Requested size: 390.0pt x 134.57204pt.
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Logo.
 jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 24.
+(Font)              <14.4> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 24.
- [1] (./Report.toc
+(Font)              <7> on input line 26.
+
+[1] (./Report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -234,17 +302,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <"UML 1".png, id=16, 161.60374pt x 332.24126pt>
 File: "UML 1".png Graphic file (type png)
 <use "UML 1".png>
-Package pdftex.def Info: "UML 1".png  used on input line 35.
+Package pdftex.def Info: "UML 1".png  used on input line 40.
 (pdftex.def)             Requested size: 161.60335pt x 332.24043pt.
-
-[2 <./UML 1.png>]
-Overfull \hbox (1.4626pt too wide) in paragraph at lines 55--56
+ [2 <./UML 1.png>]
+Overfull \hbox (1.4626pt too wide) in paragraph at lines 60--61
 \OT1/cmr/m/n/12 dif-fer-ent value passed as a pa-ram-e-ter. All three lists wer
 e printed as should.  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
 \OT1/cmr/m/n/12 point-ers. 
  []
 
@@ -252,54 +319,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--64
 <"UML 2".png, id=25, 1937.2375pt x 3386.6525pt>
 File: "UML 2".png Graphic file (type png)
 <use "UML 2".png>
-Package pdftex.def Info: "UML 2".png  used on input line 70.
+Package pdftex.def Info: "UML 2".png  used on input line 75.
 (pdftex.def)             Requested size: 338.63736pt x 592.00128pt.
  [4]
 Overfull \vbox (90.26793pt too high) has occurred while \output is active []
 
 
 [5 <./UML 2.png (PNG copy)>]
-Overfull \hbox (2.63344pt too wide) in paragraph at lines 78--79
+Overfull \hbox (2.63344pt too wide) in paragraph at lines 83--84
 \OT1/cmr/m/n/12 For the test-ing, JU-nit was used and new meth-ods were added a
 s the project 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 \OT1/cmr/m/n/12 can be avoided with proper en-cap-su-la-tion. 
  []
 
 <"UML 3".png, id=33, 683.55376pt x 302.12875pt>
 File: "UML 3".png Graphic file (type png)
 <use "UML 3".png>
-Package pdftex.def Info: "UML 3".png  used on input line 94.
+Package pdftex.def Info: "UML 3".png  used on input line 99.
 (pdftex.def)             Requested size: 390.0pt x 172.38113pt.
 [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
- [7 <./UML 3.png>] [8] (./Report.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+ [7 <./UML 3.png>]
+<"Plagerism Form".pdf, id=42, 614.295pt x 794.97pt>
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf>
+Package pdftex.def Info: "Plagerism Form".pdf  used on input line 129.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf>
+Package pdftex.def Info: "Plagerism Form".pdf  used on input line 129.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+<"Plagerism Form".pdf, id=45, page=1, 614.295pt x 794.97pt>
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf, page 1>
+Package pdftex.def Info: "Plagerism Form".pdf , page1 used on input line 129.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf, page 1>
+Package pdftex.def Info: "Plagerism Form".pdf , page1 used on input line 129.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [8]
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf, page 1>
+Package pdftex.def Info: "Plagerism Form".pdf , page1 used on input line 129.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf, page 1>
+Package pdftex.def Info: "Plagerism Form".pdf , page1 used on input line 129.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: "Plagerism Form".pdf Graphic file (type pdf)
+<use "Plagerism Form".pdf, page 1>
+Package pdftex.def Info: "Plagerism Form".pdf , page1 used on input line 129.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [9 <./Plagerism Form.pdf>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 3327 strings out of 492616
- 46599 string characters out of 6129480
- 146337 words of memory out of 5000000
- 7219 multiletter control sequences out of 15000+600000
+ 4642 strings out of 492616
+ 65872 string characters out of 6129480
+ 172514 words of memory out of 5000000
+ 8495 multiletter control sequences out of 15000+600000
  9414 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,32p,534b,1266s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (10 pages, 885603 bytes).
+ 41i,18n,43p,534b,1266s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Report.pdf (11 pages, 1235130 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
