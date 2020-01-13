@@ -1,9 +1,5 @@
 
 import org.junit.Test;
-
-import java.nio.charset.StandardCharsets;
-import java.util.Random;
-
 import static org.junit.Assert.*;
 
 public class TraderTest {
@@ -13,6 +9,7 @@ public class TraderTest {
     //tests creating a new user successfully
     @Test
     public void TraderTest1(){
+
 
 
         double maxWallet = 100000000;
